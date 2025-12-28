@@ -758,6 +758,7 @@ section h2 {
   font-weight: var(--font-weight-medium);
   margin-bottom: var(--spacing-sm);
   color: var(--color-text);
+  font-size: 1.125rem;
 }
 
 .form-group label span[aria-label="required"] {
@@ -772,10 +773,11 @@ section h2 {
   border: 2px solid var(--color-border);
   border-radius: var(--border-radius);
   font-family: var(--font-primary);
-  font-size: var(--font-size-base);
+  font-size: 1.125rem;
   color: var(--color-text);
   background-color: var(--color-surface);
   transition: var(--transition);
+  width: 100%;
 }
 
 .form-group input:focus,
