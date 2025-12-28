@@ -734,18 +734,18 @@ section h2 {
 
 .contact-form-section {
   max-width: 600px;
-  margin: var(--spacing-lg) 0;
+  margin: 0;
 }
 
 .contact-form {
   background-color: var(--color-surface);
-  padding: var(--spacing-lg);
+  padding: 0;
   border-radius: var(--border-radius);
-  border: 2px solid var(--color-border);
+  border: 0;
 }
 
 .form-group {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
 }
