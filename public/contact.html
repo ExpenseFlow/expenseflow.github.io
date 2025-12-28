@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ExpenseFlow</title>
+  <meta name="description" content="Get in touch with ExpenseFlow. Contact us for support, sales inquiries, partnerships, or any questions about our expense tracking solution.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://expenseflow.app/contact.html">
+  <meta property="og:title" content="Contact Us | ExpenseFlow">
+  <meta property="og:description" content="Get in touch with ExpenseFlow. Contact us for support, sales inquiries, partnerships, or any questions about our expense tracking solution.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://expenseflow.app/contact.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23BFA100' width='100' height='100'/></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo-nav">
+        <img src="/assets/logo.jpeg" alt="ExpenseFlow Logo" class="logo">
+        <nav role="navigation" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <article class="article-wrapper">
+      <header class="article-header">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+      </header>
+
+      <div class="article-content">
+        <div class="contact-form-section">
+          <form id="contactForm" class="contact-form" method="POST" action="https://formspree.io/f/xwvkblrq">
+
+            <div class="form-group">
+              <label for="name">Name <span aria-label="required">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                aria-required="true"
+                placeholder="Your full name"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span aria-label="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                aria-required="true"
+                placeholder="your.email@example.com"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category <span aria-label="required">*</span></label>
+              <select
+                id="category"
+                name="category"
+                required
+                aria-required="true"
+              >
+                <option value="">Select a category</option>
+                <option value="help">Support / Help</option>
+                <option value="sales">Sales Inquiry</option>
+                <option value="partnership">Partnership</option>
+                <option value="privacy">Privacy Concern</option>
+                <option value="security">Security Issue</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject <span aria-label="required">*</span></label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                aria-required="true"
+                placeholder="Brief description of your inquiry"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span aria-label="required">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                aria-required="true"
+                rows="6"
+                placeholder="Please provide as much detail as possible"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+
+          <div id="successMessage" class="form-message success-message" style="display: none;">
+            <p>Thank you for contacting us! We've received your message and will get back to you shortly.</p>
+          </div>
+
+          <div id="errorMessage" class="form-message error-message" style="display: none;">
+            <p>There was an error sending your message. Please try again or contact us directly at <a href="mailto:support@aryabhatta.ca">support@aryabhatta.ca</a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/contact.html">Contact Us</a>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2025 <a href="https://aryabhatta.ca" target="_blank">Aryabhatta Labs Ltd</a>. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      // Get form elements
+      const categorySelect = document.getElementById('category');
+      const subjectInput = document.getElementById('subject');
+      const successMsg = document.getElementById('successMessage');
+      const errorMsg = document.getElementById('errorMessage');
+
+      // Get the selected category label
+      const categoryLabel = categorySelect.options[categorySelect.selectedIndex].text;
+      const originalSubject = subjectInput.value;
+
+      // Format subject as [category] subject
+      const formattedSubject = `[${categoryLabel}] ${originalSubject}`;
+
+      // Update the subject field with formatted value before submission
+      subjectInput.value = formattedSubject;
+
+      // Hide messages initially
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+
+      // Formspree handles the submission automatically
+      // We'll let the default behavior work
+      setTimeout(function() {
+        // After submission, show success message
+        const form = document.getElementById('contactForm');
+        if (form) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+          successMsg.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>
