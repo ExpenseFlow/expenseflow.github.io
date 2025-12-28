@@ -155,7 +155,10 @@
 
   <script>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
       // Get form elements
+      const form = document.getElementById('contactForm');
       const categorySelect = document.getElementById('category');
       const subjectInput = document.getElementById('subject');
       const successMsg = document.getElementById('successMessage');
@@ -168,24 +171,41 @@
       // Format subject as [category] subject
       const formattedSubject = `[${categoryLabel}] ${originalSubject}`;
 
-      // Update the subject field with formatted value before submission
-      subjectInput.value = formattedSubject;
+      // Create FormData from the form
+      const formData = new FormData(form);
+      // Update subject with formatted value
+      formData.set('subject', formattedSubject);
 
       // Hide messages initially
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
 
-      // Formspree handles the submission automatically
-      // We'll let the default behavior work
-      setTimeout(function() {
-        // After submission, show success message
-        const form = document.getElementById('contactForm');
-        if (form) {
+      // Submit via fetch API
+      fetch('https://formspree.io/f/xwvkblrq', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          // Show success message
           form.style.display = 'none';
           successMsg.style.display = 'block';
           successMsg.scrollIntoView({ behavior: 'smooth' });
+          // Reset form for future submissions
+          form.reset();
+          subjectInput.value = '';
+        } else {
+          throw new Error('Form submission failed');
         }
-      }, 1000);
+      })
+      .catch(error => {
+        // Show error message
+        errorMsg.style.display = 'block';
+        errorMsg.scrollIntoView({ behavior: 'smooth' });
+      });
     });
   </script>
 
