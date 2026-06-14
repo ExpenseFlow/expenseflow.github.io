@@ -879,6 +879,426 @@ section h2 {
 }
 
 /* ============================================================================
+   16b. NEW LANDING-PAGE COMPONENTS (B2B refresh)
+   ============================================================================ */
+
+/* Nav CTA button */
+.btn-nav {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  padding: 0.5rem 1.25rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.btn-nav:hover,
+.btn-nav:focus {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+  text-decoration: none;
+}
+
+/* Shared section helpers */
+.section-lead {
+  text-align: center;
+  max-width: var(--max-width-narrow);
+  margin: 0 auto var(--spacing-lg);
+  font-size: 1.15rem;
+  color: var(--color-text-light);
+}
+
+.section-aside {
+  text-align: center;
+  max-width: var(--max-width-narrow);
+  margin: var(--spacing-lg) auto 0;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.section-tagline {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin: var(--spacing-lg) 0 0;
+}
+
+.section-tagline em {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+/* Hero additions */
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-surface);
+  opacity: 0.9;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-trust {
+  color: var(--color-surface);
+  opacity: 0.9;
+  font-size: 0.9rem;
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+}
+
+/* Trust / verticals bar */
+.trust-bar {
+  background-color: var(--color-primary);
+  padding: var(--spacing-md) 0;
+}
+
+.trust-bar-label {
+  text-align: center;
+  color: rgba(255, 248, 240, 0.85);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.trust-bar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm) var(--spacing-lg);
+}
+
+.trust-bar-list li {
+  color: var(--color-surface);
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+}
+
+/* Problem section */
+.problem {
+  background-color: var(--color-background);
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.problem-card {
+  background-color: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+}
+
+.problem-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.problem-card p {
+  margin-bottom: 0;
+  color: var(--color-text-light);
+}
+
+/* How it works steps */
+.how-it-works {
+  background-color: var(--color-surface);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.step-card {
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.step-number {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.step-card p {
+  color: var(--color-text-light);
+  margin-bottom: 0;
+}
+
+/* Comparison table */
+.comparison {
+  background-color: var(--color-background);
+}
+
+.comparison-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  min-width: 640px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-table thead th {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.comparison-table tbody th {
+  text-align: left;
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.comparison-table .col-highlight {
+  background-color: rgba(191, 161, 0, 0.08);
+  font-weight: var(--font-weight-bold);
+}
+
+.comparison-table thead .col-highlight {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.comparison-table .yes {
+  color: #2e7d32;
+  font-weight: var(--font-weight-bold);
+}
+
+.comparison-table .no {
+  color: var(--color-text-light);
+}
+
+.comparison-table .partial {
+  color: #b26a00;
+}
+
+/* B2B / finance section */
+.b2b {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.b2b-inner {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+.b2b h2 {
+  color: var(--color-surface);
+  text-align: left;
+}
+
+.b2b .section-lead {
+  text-align: left;
+  margin-left: 0;
+  color: rgba(255, 248, 240, 0.9);
+}
+
+.b2b-list {
+  list-style: none;
+  margin: 0 0 var(--spacing-lg);
+  padding: 0;
+}
+
+.b2b-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: rgba(255, 248, 240, 0.95);
+}
+
+.b2b-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+.b2b-list strong {
+  color: var(--color-surface);
+}
+
+.cta-left {
+  justify-content: flex-start;
+}
+
+.b2b .btn-secondary {
+  color: var(--color-surface);
+  border-color: var(--color-surface);
+}
+
+.b2b .btn-secondary:hover,
+.b2b .btn-secondary:focus {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+/* Pricing additions */
+.price-note {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.pricing-card {
+  position: relative;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.875rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pricing-anchor {
+  text-align: center;
+  max-width: var(--max-width-narrow);
+  margin: var(--spacing-md) auto 0;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* FAQ */
+.faq {
+  background-color: var(--color-surface);
+}
+
+.faq-list {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  background-color: var(--color-background);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  font-size: 1.05rem;
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: '–';
+}
+
+.faq-item p {
+  margin: var(--spacing-sm) 0 0;
+  color: var(--color-text-light);
+}
+
+/* Final CTA band */
+.cta-band {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  color: var(--color-surface);
+  text-align: center;
+}
+
+.cta-band h2 {
+  color: var(--color-surface);
+}
+
+.cta-band p {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto var(--spacing-lg);
+  font-size: 1.15rem;
+  color: rgba(255, 248, 240, 0.95);
+}
+
+.cta-band .btn-secondary {
+  color: var(--color-surface);
+  border-color: var(--color-surface);
+}
+
+.cta-band .btn-secondary:hover,
+.cta-band .btn-secondary:focus {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .b2b h2,
+  .b2b .section-lead {
+    text-align: center;
+  }
+
+  .cta-left {
+    justify-content: center;
+  }
+}
+
+/* ============================================================================
    16. UTILITY CLASSES
    ============================================================================ */
 
