@@ -1,0 +1,174 @@
+/**
+ * @theme-id: minimal
+ * @theme-name: Minimal
+ * @theme-hint: Professional minimalist, greyscale-first
+ * @theme-primary: 51 51 51
+ * @theme-secondary: 102 102 102
+ */
+
+/* ==================== LIGHT VARIANT ==================== */
+:root[data-theme='minimal'][data-variant='light'] {
+	/* Main text color */
+	--color-foreground: rgb(51 51 51);
+
+	/* Primary action colors: Dark Grey */
+	--color-primary: rgb(51 51 51);
+	--color-on-primary: rgb(255 255 255);
+
+	/* Secondary accent: Medium Grey */
+	--color-secondary: rgb(102 102 102);
+	--color-on-secondary: rgb(255 255 255);
+
+	/* Error/destructive: Red */
+	--color-error: rgb(255 59 48);
+	--color-on-error: rgb(255 255 255);
+
+	/* Surface levels */
+	--color-surface: rgb(255 255 255);
+	--color-on-surface: rgb(51 51 51);
+	--color-surface-dim: rgb(240 240 240);
+	--color-surface-bright: rgb(255 255 255);
+
+	/* Supporting elements */
+	--color-outline: rgb(51 51 51);
+	--color-outline-variant: rgb(204 204 204);
+	--color-background: rgb(255 255 255);
+	--color-on-background: rgb(51 51 51);
+
+	/* Card and other UI elements */
+	--color-card: rgb(255 255 255);
+	--color-card-foreground: rgb(51 51 51);
+	--color-muted: rgb(245 245 245);
+	--color-muted-foreground: rgb(102 102 102);
+	--color-accent: rgb(51 51 51);
+	--color-accent-foreground: rgb(255 255 255);
+	--color-border: rgb(224 224 224);
+	--color-input: rgb(245 245 245);
+	--color-on-input: var(--color-card-foreground);
+	--color-popover: var(--color-card);
+	--color-popover-foreground: var(--color-card-foreground);
+	--color-ring: rgb(51 51 51);
+
+	/* Sidebar colors */
+	--color-sidebar: rgb(250 250 250);
+	--color-sidebar-foreground: rgb(51 51 51);
+	--color-sidebar-primary: rgb(51 51 51);
+	--color-sidebar-primary-foreground: rgb(255 255 255);
+	--color-sidebar-accent: rgb(240 240 240);
+	--color-sidebar-accent-foreground: rgb(51 51 51);
+	--color-sidebar-border: rgb(224 224 224);
+	--color-sidebar-ring: rgb(51 51 51);
+	--color-sidebar-active-bg: rgb(0 0 0 / 0.08);
+	--color-status-ready-bg: rgba(52, 199, 89, 0.15);
+	--color-status-ready-text: rgb(0 102 51);
+	--color-status-failed-bg: rgba(255, 59, 48, 0.15);
+	--color-status-failed-text: rgb(153 27 27);
+	--color-status-linked-bg: rgba(33, 150, 243, 0.15);
+	--color-status-linked-text: rgb(13 71 161);
+	--color-status-archived-bg: rgba(158, 158, 158, 0.15);
+	--color-status-archived-text: rgb(97 97 97);
+}
+
+/* ==================== DARK VARIANT ==================== */
+:root[data-theme='minimal'][data-variant='dark'] {
+	/* Main text color - BRIGHT for readability */
+	--color-foreground: rgb(242 242 242);
+
+	/* Primary action colors: Dark Grey */
+	--color-primary: rgb(51 51 51);
+	--color-on-primary: rgb(255 255 255);
+
+	/* Secondary accent: Light Grey - IMPROVED for better contrast */
+	--color-secondary: rgb(179 179 179);
+	--color-on-secondary: rgb(30 30 30);
+
+	/* Error/destructive: Red */
+	--color-error: rgb(255 59 48);
+	--color-on-error: rgb(255 255 255);
+
+	/* Surface levels */
+	--color-surface: rgb(40 40 40);
+	--color-on-surface: rgb(242 242 242);
+	--color-surface-dim: rgb(40 40 40);
+	--color-surface-bright: rgb(76 76 76);
+
+	/* Supporting elements */
+	--color-outline: rgb(89 89 89);
+	--color-outline-variant: rgb(102 102 102);
+	--color-background: rgb(35 35 35);
+	--color-on-background: rgb(242 242 242);
+
+	/* Card and other UI elements */
+	--color-card: rgb(51 51 51);
+	--color-card-foreground: rgb(242 242 242);
+	--color-muted: rgb(77 77 77);
+	--color-muted-foreground: rgb(204 204 204);
+	--color-accent: rgb(51 51 51);
+	--color-accent-foreground: rgb(255 255 255);
+	--color-border: rgb(89 89 89);
+	--color-input: rgb(51 51 51);
+	--color-on-input: var(--color-card-foreground);
+	--color-popover: var(--color-card);
+	--color-popover-foreground: var(--color-card-foreground);
+	--color-ring: rgb(128 128 128);
+
+	/* Sidebar colors */
+	--color-sidebar: rgb(35 35 35);
+	--color-sidebar-foreground: rgb(242 242 242);
+	--color-sidebar-primary: rgb(102 102 102);
+	--color-sidebar-primary-foreground: rgb(255 255 255);
+	--color-sidebar-accent: rgb(63 63 63);
+	--color-sidebar-accent-foreground: rgb(242 242 242);
+	--color-sidebar-border: rgb(89 89 89);
+	--color-sidebar-ring: rgb(140 140 140);
+	--color-sidebar-active-bg: rgb(255 255 255 / 0.1);
+	--color-status-ready-bg: rgba(52, 199, 89, 0.25);
+	--color-status-ready-text: rgb(134 239 120);
+	--color-status-failed-bg: rgba(255, 59, 48, 0.25);
+	--color-status-failed-text: rgb(252 112 112);
+	--color-status-linked-bg: rgba(33, 150, 243, 0.25);
+	--color-status-linked-text: rgb(96 165 250);
+	--color-status-archived-bg: rgba(158, 158, 158, 0.25);
+	--color-status-archived-text: rgb(209 213 219);
+}
+
+/* ==================== HIGH CONTRAST VARIANT ==================== */
+:root[data-theme='minimal'][data-variant='high-contrast'] {
+	/* Main text color - MAXIMUM CONTRAST */
+	--color-foreground: rgb(255 255 255);
+
+	/* Primary action colors */
+	--color-primary: rgb(255 255 255);
+	--color-on-primary: rgb(0 0 0);
+
+	/* Secondary accent */
+	--color-secondary: rgb(180 180 180);
+	--color-on-secondary: rgb(0 0 0);
+
+	/* Surface levels */
+	--color-surface: rgb(0 0 0);
+	--color-on-surface: rgb(255 255 255);
+	--color-background: rgb(0 0 0);
+	--color-on-background: rgb(255 255 255);
+
+	/* Card and other UI elements */
+	--color-card: rgb(0 0 0);
+	--color-card-foreground: rgb(255 255 255);
+	--color-border: rgb(255 255 255);
+	--color-ring: rgb(255 255 255);
+
+	/* Sidebar colors */
+	--color-sidebar: rgb(0 0 0);
+	--color-sidebar-foreground: rgb(255 255 255);
+	--color-sidebar-primary: rgb(255 255 255);
+	--color-sidebar-primary-foreground: rgb(0 0 0);
+	--color-sidebar-active-bg: rgb(0 0 0 / 0.15);
+	--color-status-ready-bg: rgb(52 199 89);
+	--color-status-ready-text: rgb(255 255 255);
+	--color-status-failed-bg: rgb(255 59 48);
+	--color-status-failed-text: rgb(255 255 255);
+	--color-status-linked-bg: rgb(33 150 243);
+	--color-status-linked-text: rgb(255 255 255);
+	--color-status-archived-bg: rgb(158 158 158);
+	--color-status-archived-text: rgb(0 0 0);
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="minimal" data-variant="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXPENSEFLOW · PRICING</title>
+  <meta name="description" content="Simple, honest pricing for ExpenseFlow. Start free, upgrade to Pro at $7/mo or Business at $10/user/mo. The app pays for itself in one trip." />
+  <link rel="icon" type="image/png" href="assets/app-icon-512.png" />
+  <link rel="stylesheet" href="css/colors_and_type.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="site-nav">
+    <div class="wrap site-nav__inner">
+      <a class="brand" href="index.html">
+        <img src="assets/app-icon-512.png" alt="" />
+        <b>ExpenseFlow</b>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="features.html">Features</a>
+        <a href="calculator.html">Found-money calculator</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#accountants">For accountants</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="ghost-link" href="https://get.expenseflow.app">Sign in</a>
+        <a class="tulip-btn tulip-btn--gold" href="https://get.expenseflow.app">Start free</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="wrap wrap--narrow">
+        <p class="eyebrow center-line">Pricing</p>
+        <h1 class="display h-xl">Simple, honest pricing.</h1>
+        <p class="lede">Start free with no credit card. Upgrade when the deductions add up. At $0.73/km, about 17 work kilometres a month pays for Pro — the app pays for itself in one trip.</p>
+        <div class="bill-toggle" style="justify-content:center;">
+          <span class="strong" id="lblMonthly">Monthly</span>
+          <button class="switch" id="billSwitch" aria-pressed="false" aria-label="Toggle annual billing"></button>
+          <span class="muted" id="lblAnnual">Annual</span>
+          <span class="save-pill">Save ~17%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING CARDS ===================== -->
+    <section class="section section--tight" style="padding-top:clamp(32px,4vw,48px);">
+      <div class="wrap">
+        <div class="price-grid">
+          <!-- FREE -->
+          <div class="price-card">
+            <h3>Free</h3>
+            <p class="blurb">For individuals trying it out, with no strings attached.</p>
+            <div class="amt">$0</div>
+            <div class="per">5 trips + 5 receipts / month</div>
+            <a class="tulip-btn tulip-btn--outline" href="https://get.expenseflow.app">Start free</a>
+            <ul>
+              <li><span class="material-symbols-outlined">check</span> Automatic GPS trip tracking</li>
+              <li><span class="material-symbols-outlined">check</span> Receipt capture &amp; OCR</li>
+              <li><span class="material-symbols-outlined">check</span> 1 user</li>
+              <li class="off"><span class="material-symbols-outlined">close</span> Export</li>
+              <li class="off"><span class="material-symbols-outlined">close</span> Team features</li>
+            </ul>
+          </div>
+
+          <!-- PRO -->
+          <div class="price-card">
+            <h3>Pro</h3>
+            <p class="blurb">For solo contractors, agents and freelancers.</p>
+            <div class="amt"><span data-price data-monthly="7" data-annual="5.83">$7</span> <small>/ mo</small></div>
+            <div class="per" data-per data-monthly="per user, billed monthly" data-annual="per user — $70 billed yearly">per user, billed monthly</div>
+            <a class="tulip-btn tulip-btn--outline" href="https://get.expenseflow.app">Get Pro</a>
+            <ul>
+              <li><span class="material-symbols-outlined">check</span> Unlimited trips &amp; receipts</li>
+              <li><span class="material-symbols-outlined">check</span> CRA-ready export (PDF / CSV)</li>
+              <li><span class="material-symbols-outlined">check</span> Full desktop web app</li>
+              <li><span class="material-symbols-outlined">check</span> AI categorization hints</li>
+              <li><span class="material-symbols-outlined">check</span> Email support</li>
+            </ul>
+          </div>
+
+          <!-- BUSINESS -->
+          <div class="price-card feat">
+            <span class="badge">Most popular</span>
+            <h3>Business</h3>
+            <p class="blurb">For SMB finance teams of 5+ seats.</p>
+            <div class="amt"><span data-price data-monthly="10" data-annual="8.33">$10</span> <small>/ user / mo</small></div>
+            <div class="per" data-per data-monthly="per user, billed monthly" data-annual="per user — $100 billed yearly">per user, billed monthly</div>
+            <a class="tulip-btn tulip-btn--filled" href="https://get.expenseflow.app">Book a demo</a>
+            <ul>
+              <li><span class="material-symbols-outlined">check</span> Everything in Pro</li>
+              <li><span class="material-symbols-outlined">check</span> Team dashboard &amp; expense visibility</li>
+              <li><span class="material-symbols-outlined">check</span> Approval workflows</li>
+              <li><span class="material-symbols-outlined">check</span> AI budget alerts</li>
+              <li><span class="material-symbols-outlined">check</span> Accountant portal</li>
+              <li><span class="material-symbols-outlined">check</span> SSO, API &amp; data residency</li>
+              <li><span class="material-symbols-outlined">check</span> Fraud detection &amp; audit logs</li>
+              <li><span class="material-symbols-outlined">check</span> Priority support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="enterprise-note">
+          <div class="en-txt">
+            <h4>Running 50+ seats or need something custom?</h4>
+            <p>Enterprise layers dedicated support, custom integrations, SLAs and tailored data-residency terms on top of everything in Business.</p>
+          </div>
+          <a class="tulip-btn tulip-btn--outline" href="https://get.expenseflow.app">Book a demo</a>
+        </div>
+        <p class="center kicker-note" style="margin-top:28px;">All prices in CAD. Accountant-referred clients get 3 months free.</p>
+      </div>
+    </section>
+
+    <!-- ===================== VALUE ANCHOR ===================== -->
+    <section class="section section--ink section--tight">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <p class="eyebrow">The math</p>
+            <h2 class="display h-md">Pro costs less than the deduction from one work commute.</h2>
+            <p class="lede">$7/month is the cost of a cappuccino. One 10 km round-trip to a job site is worth $7.30 back at the 2026 CRA rate. Track a single trip and Pro has already paid for itself.</p>
+          </div>
+          <div style="display:grid;gap:16px;align-content:center;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink-line);padding-bottom:14px;">
+              <span style="color:var(--on-ink-dim);">Pro, per month</span>
+              <span style="font-family:var(--font-display);font-weight:800;font-size:28px;">$7.00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink-line);padding-bottom:14px;">
+              <span style="color:var(--on-ink-dim);">Deduction from ~10 km / day, 20 days</span>
+              <span style="font-family:var(--font-display);font-weight:800;font-size:28px;" class="gold">$146.00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding-top:4px;">
+              <span style="color:var(--on-ink);font-weight:600;">Net found money / month</span>
+              <span style="font-family:var(--font-display);font-weight:900;font-size:34px;" class="gold">+$139</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURE MATRIX ===================== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow center-line">Compare plans</p>
+          <h2 class="display h-lg">Every feature, side by side.</h2>
+        </div>
+        <div class="matrix-wrap">
+          <table class="matrix">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Free</th>
+                <th>Pro<span>$7/mo</span></th>
+                <th>Business<span>$10/user</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group"><td colspan="4">Tracking &amp; capture</td></tr>
+              <tr><td>Automatic GPS trip tracking</td><td>5 / mo</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Receipt capture &amp; AI OCR</td><td>5 / mo</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>±1 m waypoint accuracy</td><td class="yes"><span class="material-symbols-outlined">check</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>AI smart-context categorization</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+
+              <tr class="group"><td colspan="4">Reporting &amp; export</td></tr>
+              <tr><td>CRA / IRS-ready export (PDF / CSV)</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Multi-jurisdiction tax support</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Audit-Defense Vault</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+
+              <tr class="group"><td colspan="4">Teams &amp; finance</td></tr>
+              <tr><td>Seats included</td><td>1</td><td>1</td><td>5+</td></tr>
+              <tr><td>Team dashboard &amp; visibility</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Approval workflows</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>AI budget alerts</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Accountant portal</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+
+              <tr class="group"><td colspan="4">Security &amp; admin</td></tr>
+              <tr><td>SSO &amp; API access</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Data residency (CA / US / EU)</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Fraud detection</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Admin audit logs &amp; RBAC</td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="no"><span class="material-symbols-outlined">close</span></td><td class="yes"><span class="material-symbols-outlined">check</span></td></tr>
+              <tr><td>Support</td><td>Community</td><td>Email</td><td>Priority</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section section--dim">
+      <div class="wrap wrap--narrow">
+        <div class="section-head center">
+          <p class="eyebrow center-line">Questions</p>
+          <h2 class="display h-lg">Before you decide.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Do I need a credit card to start? <span class="material-symbols-outlined">add</span></summary>
+            <p>No. You can track your first 5 trips with no account and no card at all — download, drive, and see the deductions add up. Create an account only when you're ready to lock the savings in.</p>
+          </details>
+          <details>
+            <summary>What counts toward the Free plan's limits? <span class="material-symbols-outlined">add</span></summary>
+            <p>The Free plan covers 5 auto-tracked trips and 5 receipts per calendar month, for one user. It's built for trying ExpenseFlow and for demos — upgrade to Pro for unlimited tracking and export.</p>
+          </details>
+          <details>
+            <summary>How does annual billing work? <span class="material-symbols-outlined">add</span></summary>
+            <p>Pay yearly and you get roughly two months free — about 17% off. Pro works out to $70/year and Business to $100/user/year. Toggle "Annual" above to see the per-month equivalent.</p>
+          </details>
+          <details>
+            <summary>What's the difference between Pro and Business? <span class="material-symbols-outlined">add</span></summary>
+            <p>Pro is for individuals — unlimited tracking, export and the full web app. Business adds everything a finance team needs: a shared dashboard, approval workflows, AI budget alerts and the accountant portal, for 5–50 seats.</p>
+          </details>
+          <details>
+            <summary>I'm an accountant. Is there a partner program? <span class="material-symbols-outlined">add</span></summary>
+            <p>Yes. Clients you refer get 3 months free, and you get a view-only portal to review their logs, waypoint accuracy and data integrity. Standardized exports mean the same clean format from every client.</p>
+          </details>
+          <details>
+            <summary>Can I change or cancel my plan anytime? <span class="material-symbols-outlined">add</span></summary>
+            <p>Anytime. Upgrade, downgrade or cancel from your account settings — changes take effect at your next billing cycle, with no lock-in.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="section section--ink cta-band">
+      <div class="wrap wrap--narrow">
+        <p class="eyebrow center-line">Drive first, account later</p>
+        <h2 class="display h-lg">Start free. Upgrade when you're ready.</h2>
+        <p class="lede">Your next 5 trips are on us — no credit card, no sign-up form.</p>
+        <div class="btn-row" style="justify-content:center;">
+          <a class="tulip-btn tulip-btn--gold btn-lg" href="https://get.expenseflow.app">Start free</a>
+          <a class="tulip-btn tulip-btn--outline btn-lg" href="calculator.html">Calculate my deduction</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
+          <p>Auto-tracked mileage and receipts, turned into audit-ready reports. Built in Canada for the 2026 CRA rates.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="calculator.html">Found-money calculator</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="https://get.expenseflow.app">Sign in</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#accountants">For accountants</a>
+          <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs</a>
+          <a href="mailto:hello@expenseflow.app">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs Ltd</a>. All rights reserved.</span>
+        <span>Made in Canada</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var file = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function (a) {
+        if (a.getAttribute('href') === file) a.classList.add('active');
+      });
+    })();
+
+    // Billing toggle
+    (function () {
+      var sw = document.getElementById('billSwitch');
+      var lblM = document.getElementById('lblMonthly');
+      var lblA = document.getElementById('lblAnnual');
+      var annual = false;
+      function render() {
+        sw.setAttribute('aria-pressed', annual ? 'true' : 'false');
+        lblM.className = annual ? 'muted' : 'strong';
+        lblA.className = annual ? 'strong' : 'muted';
+        document.querySelectorAll('[data-price]').forEach(function (el) {
+          var v = annual ? el.dataset.annual : el.dataset.monthly;
+          el.textContent = '$' + (annual ? (+v).toFixed(2) : v);
+        });
+        document.querySelectorAll('[data-per]').forEach(function (el) {
+          el.textContent = annual ? el.dataset.annual : el.dataset.monthly;
+        });
+      }
+      sw.addEventListener('click', function () { annual = !annual; render(); });
+      render();
+    })();
+  </script>
+</body>
+</html>

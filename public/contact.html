@@ -20,135 +20,125 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23BFA100' width='100' height='100'/></svg>">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-
   <!-- Styles -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="css/colors_and_type.css">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="logo-nav">
-        <img src="/assets/logo.jpeg" alt="ExpenseFlow Logo" class="logo">
-        <nav role="navigation" aria-label="Main navigation">
-          <a href="/">Home</a>
-          <a href="/privacy.html">Privacy</a>
-          <a href="/terms.html">Terms</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
+  <!-- ===================== NAV ===================== -->
+  <header class="site-nav">
+    <div class="wrap site-nav__inner">
+      <a class="brand" href="index.html">
+        <img src="assets/app-icon-512.png" alt="" />
+        <b>ExpenseFlow</b>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="features.html">Features</a>
+        <a href="calculator.html">Found-money calculator</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#accountants">For accountants</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="ghost-link" href="https://get.expenseflow.app">Sign in</a>
+        <a class="tulip-btn tulip-btn--gold" href="https://get.expenseflow.app">Start free</a>
       </div>
     </div>
   </header>
 
-  <main role="main">
-    <article class="article-wrapper">
-      <header class="article-header">
-        <h1>Contact Us</h1>
-        <p>Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
-      </header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap wrap--narrow">
+        <p class="eyebrow center-line">Contact</p>
+        <h1 class="display h-xl">Get in touch.</h1>
+        <p class="lede">Questions, partnerships, support, or privacy concerns — we read every message.</p>
+      </div>
+    </section>
 
-      <div class="article-content">
-        <div class="contact-form-section">
-          <form id="contactForm" class="contact-form" method="POST" action="https://formspree.io/f/xwvkblrq">
+    <section class="section">
+      <div class="wrap wrap--narrow">
+        <form id="contactForm" class="contact-form" method="POST" action="https://formspree.io/f/xwvkblrq">
 
-            <div class="form-group">
-              <label for="name">Name: <span aria-label="required">*</span></label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                aria-required="true"
-                placeholder="Your full name"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email: <span aria-label="required">*</span></label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                aria-required="true"
-                placeholder="your.email@example.com"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="category">Category: <span aria-label="required">*</span></label>
-              <select
-                id="category"
-                name="category"
-                required
-                aria-required="true"
-              >
-                <option value="">Select a category</option>
-                <option value="help">Support / Help</option>
-                <option value="sales">Sales Inquiry</option>
-                <option value="partnership">Partnership</option>
-                <option value="privacy">Privacy Concern</option>
-                <option value="security">Security Issue</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Subject: <span aria-label="required">*</span></label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                required
-                aria-required="true"
-                placeholder="Brief description of your inquiry"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message: <span aria-label="required">*</span></label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                aria-required="true"
-                rows="6"
-                placeholder="Please provide as much detail as possible"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-
-          <div id="successMessage" class="form-message success-message" style="display: none;">
-            <p>Thank you for contacting us! We've received your message and will get back to you shortly.</p>
+          <div class="form-field">
+            <label for="name">Name <span aria-label="required">*</span></label>
+            <input class="form-field__input" type="text" id="name" name="name" required aria-required="true" placeholder="Your full name">
           </div>
 
-          <div id="errorMessage" class="form-message error-message" style="display: none;">
-            <p>There was an error sending your message. Please try again or contact us directly at <a href="mailto:support@aryabhatta.ca">support@aryabhatta.ca</a></p>
+          <div class="form-field">
+            <label for="email">Email <span aria-label="required">*</span></label>
+            <input class="form-field__input" type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com">
+          </div>
+
+          <div class="form-field">
+            <label for="category">Category <span aria-label="required">*</span></label>
+            <select class="form-field__select" id="category" name="category" required aria-required="true">
+              <option value="">Select a category</option>
+              <option value="help">Support / Help</option>
+              <option value="sales">Sales Inquiry</option>
+              <option value="partnership">Partnership</option>
+              <option value="privacy">Privacy Concern</option>
+              <option value="security">Security Issue</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject <span aria-label="required">*</span></label>
+            <input class="form-field__input" type="text" id="subject" name="subject" required aria-required="true" placeholder="Brief description of your inquiry">
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message <span aria-label="required">*</span></label>
+            <textarea class="form-field__textarea" id="message" name="message" required aria-required="true" rows="6" placeholder="Please provide as much detail as possible"></textarea>
+          </div>
+
+          <button type="submit" class="tulip-btn tulip-btn--gold">Send Message</button>
+        </form>
+
+        <div id="successMessage" style="display:none; margin-top:1.5rem;">
+          <div class="form-feedback form-feedback--success">
+            <strong>Message sent!</strong> We'll get back to you within one business day.
+          </div>
+        </div>
+        <div id="errorMessage" style="display:none; margin-top:1.5rem;">
+          <div class="form-feedback form-feedback--error">
+            <strong>Something went wrong.</strong> Please try again or email us at <a href="mailto:hello@expenseflow.app">hello@expenseflow.app</a>.
           </div>
         </div>
       </div>
-    </article>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/terms.html">Terms of Use</a>
-          <a href="/contact.html">Contact Us</a>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
+          <p>Auto-tracked mileage and receipts, turned into audit-ready reports. Built in Canada for the 2026 CRA rates.</p>
         </div>
-        <div class="footer-copy">
-          <p>&copy; 2025 <a href="https://aryabhatta.ca" target="_blank">Aryabhatta Labs Ltd</a>. All rights reserved.</p>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="calculator.html">Found-money calculator</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="https://get.expenseflow.app">Sign in</a>
         </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#accountants">For accountants</a>
+          <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs</a>
+          <a href="mailto:hello@expenseflow.app">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs Ltd</a>. All rights reserved.</span>
+        <span>Made in Canada</span>
       </div>
     </div>
   </footer>

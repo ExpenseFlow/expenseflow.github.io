@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="minimal" data-variant="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXPENSEFLOW · FOUND-MONEY CALCULATOR</title>
+  <meta name="description" content="See what the CRA owes you. Estimate your annual mileage deduction at the 2026 rate of $0.73/km — most drivers underestimate by 20%." />
+  <link rel="icon" type="image/png" href="assets/app-icon-512.png" />
+  <link rel="stylesheet" href="css/colors_and_type.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="site-nav">
+    <div class="wrap site-nav__inner">
+      <a class="brand" href="index.html">
+        <img src="assets/app-icon-512.png" alt="" />
+        <b>ExpenseFlow</b>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="features.html">Features</a>
+        <a href="calculator.html">Found-money calculator</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#accountants">For accountants</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="ghost-link" href="https://get.expenseflow.app">Sign in</a>
+        <a class="tulip-btn tulip-btn--gold" href="https://get.expenseflow.app">Start free</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO + CALCULATOR ===================== -->
+    <section class="section--ink" style="padding-block:clamp(48px,6vw,80px);">
+      <div class="wrap">
+        <div class="section-head center" style="margin-bottom:40px;">
+          <p class="eyebrow center-line">Found-money calculator</p>
+          <h1 class="display h-xl" style="color:var(--on-ink);">See what the CRA owes you.</h1>
+          <p class="lede" style="color:var(--on-ink-dim);">Most drivers underestimate their refund by 20%. Move the sliders to estimate your deduction at the 2026 CRA rate of <span class="gold">$0.73/km</span>.</p>
+        </div>
+
+        <div class="calc">
+          <div class="calc__controls">
+            <div class="calc-field">
+              <div class="lab"><span class="t">Business km / week</span><span class="v" id="vKm">300</span></div>
+              <input type="range" class="calc-range" id="rKm" min="20" max="1200" step="10" value="300" />
+            </div>
+
+            <div class="calc-field">
+              <div class="lab"><span class="t">Weeks driven / year</span><span class="v" id="vWeeks">48</span></div>
+              <input type="range" class="calc-range" id="rWeeks" min="20" max="52" step="1" value="48" />
+            </div>
+
+            <div class="calc-field">
+              <div class="lab"><span class="t">What do you drive for?</span></div>
+              <div class="seg" id="segRole" role="group" aria-label="Driver type">
+                <button type="button" data-role="agent" aria-pressed="true">Real estate</button>
+                <button type="button" data-role="trades" aria-pressed="false">Trades</button>
+                <button type="button" data-role="gig" aria-pressed="false">Gig / delivery</button>
+                <button type="button" data-role="other" aria-pressed="false">Other</button>
+              </div>
+            </div>
+
+            <div class="calc-field">
+              <div class="lab"><span class="t">How you track today</span></div>
+              <div class="seg" id="segMethod" role="group" aria-label="Current tracking method">
+                <button type="button" data-method="none" aria-pressed="true">Nothing / guess</button>
+                <button type="button" data-method="manual" aria-pressed="false">Spreadsheet</button>
+                <button type="button" data-method="competitor" aria-pressed="false">Cell-tower app</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc__result">
+            <div class="rlab">You could be claiming</div>
+            <div class="ramt" id="vTotal">$11,388</div>
+            <div class="rsub" id="vSub">in mileage deductions this year — money the CRA owes you back at $0.73/km.</div>
+
+            <div class="rbreak">
+              <div><span>Annual business distance</span><b id="vDist">15,600 km</b></div>
+              <div><span>At the 2026 CRA rate</span><b>$0.73 / km</b></div>
+              <div><span id="vLossLabel">Lost to cell-tower rounding</span><b class="gold" id="vLoss">$0</b></div>
+            </div>
+
+            <a class="tulip-btn tulip-btn--gold btn-lg" href="https://get.expenseflow.app">Track my next 5 trips free</a>
+          </div>
+        </div>
+
+        <p class="center" style="color:var(--on-ink-dim);font-size:13px;margin-top:20px;">Estimate only. Your deduction depends on your business-use percentage and tax situation — talk to your accountant.</p>
+      </div>
+    </section>
+
+    <!-- ===================== WHY YOU'RE LEAVING MONEY ===================== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head left">
+          <p class="eyebrow">Why the number is bigger than you think</p>
+          <h2 class="display h-lg">Three ways drivers lose the deduction.</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feat-card">
+            <span class="ico"><span class="material-symbols-outlined">edit_off</span></span>
+            <h3>Forgotten trips</h3>
+            <p>Every drive you don't write down is a deduction you can't claim. Manual logs miss 20–30% of trips. Automatic tracking catches all of them.</p>
+          </div>
+          <div class="feat-card">
+            <span class="ico"><span class="material-symbols-outlined">network_cell</span></span>
+            <h3>Cell-tower rounding</h3>
+            <p>Apps that snap to the nearest tower lose 3–5% of distance on winding roads. ExpenseFlow logs real waypoints to ±1 metre.</p>
+          </div>
+          <div class="feat-card">
+            <span class="ico"><span class="material-symbols-outlined">rule</span></span>
+            <h3>Rejected logs</h3>
+            <p>Rounded numbers, missing trip purpose and no odometer readings get logs thrown out. A clean, time-stamped record survives an audit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section section--ink cta-band section--tight">
+      <div class="wrap wrap--narrow">
+        <h2 class="display h-lg">Don't lose it to a messy logbook.</h2>
+        <p class="lede">Download ExpenseFlow and we'll log your next 5 trips free — no account needed. Lock in the money you just found.</p>
+        <div class="btn-row" style="justify-content:center;">
+          <a class="tulip-btn tulip-btn--gold btn-lg" href="https://get.expenseflow.app">Start free</a>
+          <a class="tulip-btn tulip-btn--outline btn-lg" href="pricing.html">See pricing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
+          <p>Auto-tracked mileage and receipts, turned into audit-ready reports. Built in Canada for the 2026 CRA rates.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="calculator.html">Found-money calculator</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="https://get.expenseflow.app">Sign in</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#accountants">For accountants</a>
+          <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs</a>
+          <a href="mailto:hello@expenseflow.app">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs Ltd</a>. All rights reserved.</span>
+        <span>Made in Canada</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var file = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function (a) {
+        if (a.getAttribute('href') === file) a.classList.add('active');
+      });
+    })();
+
+    (function () {
+      var RATE = 0.73;
+      var rKm = document.getElementById('rKm');
+      var rWeeks = document.getElementById('rWeeks');
+      var vKm = document.getElementById('vKm');
+      var vWeeks = document.getElementById('vWeeks');
+      var vTotal = document.getElementById('vTotal');
+      var vDist = document.getElementById('vDist');
+      var vLoss = document.getElementById('vLoss');
+      var vLossLabel = document.getElementById('vLossLabel');
+      var vSub = document.getElementById('vSub');
+      var role = 'agent';
+      var method = 'none';
+
+      // recovery: how much MORE you'd capture vs current method
+      var recovery = { none: 0.25, manual: 0.20, competitor: 0.04 };
+      var lossLabel = {
+        none: 'Recovered vs. guessing',
+        manual: 'Recovered vs. spreadsheet',
+        competitor: 'Lost to cell-tower rounding'
+      };
+
+      function money(n) { return '$' + Math.round(n).toLocaleString('en-CA'); }
+
+      function update() {
+        var weekly = +rKm.value;
+        var weeks = +rWeeks.value;
+        vKm.textContent = weekly;
+        vWeeks.textContent = weeks;
+        var dist = weekly * weeks;
+        vDist.textContent = dist.toLocaleString('en-CA') + ' km';
+        var total = dist * RATE;
+        vTotal.textContent = money(total);
+        var extra = total * recovery[method];
+        vLoss.textContent = '+' + money(extra);
+        vLossLabel.textContent = lossLabel[method];
+        var verb = method === 'competitor' ? 'your current app would quietly round away' : 'most drivers never claim';
+        vSub.textContent = 'in mileage deductions this year — including about ' + money(extra) + ' that ' + verb + '.';
+      }
+
+      rKm.addEventListener('input', update);
+      rWeeks.addEventListener('input', update);
+
+      document.getElementById('segRole').addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true'); role = b.dataset.role;
+        // role nudges typical weekly km
+        var presets = { agent: 300, trades: 450, gig: 700, other: 200 };
+        rKm.value = presets[role]; update();
+      });
+      document.getElementById('segMethod').addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true'); method = b.dataset.method; update();
+      });
+
+      update();
+    })();
+  </script>
+</body>
+</html>

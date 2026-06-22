@@ -1,0 +1,226 @@
+/* =====================================================================
+   Tulip Design System — Core Tokens
+   Color + Typography for the ExpenseFlow web application.
+
+   This file is built on the canonical theme files:
+     - theme-minimal.css — color variables (light, dark, high-contrast)
+     - app.css           — global resets + font binding
+
+   Drop this file in alongside theme-minimal.css. The default <html>
+   element should carry data-theme="minimal" data-variant="light".
+   ===================================================================== */
+
+/* ---------- Fonts ---------- */
+/* Per spec:
+     --font-display  Jost      Headings, page titles, large metrics, dates
+     --font-sans     Roboto    Body, form fields, secondary text
+   Material Symbols Outlined ships from Google Fonts as the icon set. */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
+
+/* Material Symbols Outlined base style */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ---------- Theme tokens ---------- */
+@import url('./theme-minimal.css');
+
+/* Sensible default if no data-theme is set on <html> — light variant. */
+:root {
+  /* Color tokens (light defaults — overridden when data-theme is set) */
+  --color-foreground: rgb(51 51 51);
+  --color-primary: rgb(51 51 51);
+  --color-on-primary: rgb(255 255 255);
+  --color-secondary: rgb(102 102 102);
+  --color-on-secondary: rgb(255 255 255);
+  --color-error: rgb(255 59 48);
+  --color-on-error: rgb(255 255 255);
+
+  --color-surface: rgb(255 255 255);
+  --color-on-surface: rgb(51 51 51);
+  --color-surface-dim: rgb(240 240 240);
+  --color-surface-bright: rgb(255 255 255);
+
+  --color-outline: rgb(51 51 51);
+  --color-outline-variant: rgb(204 204 204);
+  --color-background: rgb(255 255 255);
+  --color-on-background: rgb(51 51 51);
+
+  --color-card: rgb(255 255 255);
+  --color-card-foreground: rgb(51 51 51);
+  --color-muted: rgb(245 245 245);
+  --color-muted-foreground: rgb(102 102 102);
+  --color-accent: rgb(51 51 51);
+  --color-accent-foreground: rgb(255 255 255);
+  --color-border: rgb(224 224 224);
+  --color-input: rgb(245 245 245);
+  --color-on-input: var(--color-card-foreground);
+  --color-popover: var(--color-card);
+  --color-popover-foreground: var(--color-card-foreground);
+  --color-ring: rgb(51 51 51);
+
+  --color-sidebar: rgb(250 250 250);
+  --color-sidebar-foreground: rgb(51 51 51);
+  --color-sidebar-primary: rgb(51 51 51);
+  --color-sidebar-primary-foreground: rgb(255 255 255);
+  --color-sidebar-accent: rgb(240 240 240);
+  --color-sidebar-accent-foreground: rgb(51 51 51);
+  --color-sidebar-border: rgb(224 224 224);
+  --color-sidebar-ring: rgb(51 51 51);
+  --color-sidebar-active-bg: rgb(0 0 0 / 0.08);
+
+  --color-status-ready-bg: rgba(52, 199, 89, 0.15);
+  --color-status-ready-text: rgb(0 102 51);
+  --color-status-failed-bg: rgba(255, 59, 48, 0.15);
+  --color-status-failed-text: rgb(153 27 27);
+  --color-status-linked-bg: rgba(33, 150, 243, 0.15);
+  --color-status-linked-text: rgb(13 71 161);
+  --color-status-archived-bg: rgba(158, 158, 158, 0.15);
+  --color-status-archived-text: rgb(97 97 97);
+
+  /* Pending isn't enumerated in theme-minimal — derived to match the family */
+  --color-status-pending-bg: rgba(255, 159, 10, 0.15);
+  --color-status-pending-text: rgb(140 80 10);
+
+  /* Shadow & elevation (not theme-driven — same across variants) */
+  --shadow-card:        0 2px 6px  rgba(0, 0, 0, 0.06);
+  --shadow-card-hover:  0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-selected:    0 6px 16px rgba(0, 0, 0, 0.10);
+
+  /* Radii — per spec, hardcoded values, not a scale */
+  --radius-box: 3px;
+  --radius-pill: 9999px;
+
+  /* ============ TYPOGRAPHY TOKENS ============ */
+
+  /* Two webfont families, per spec:
+       Jost   — display family. Headings, page titles, large metrics, dates.
+                Geometric humanist; works well at heavy weights (900) with tight tracking.
+       Roboto — body family. Everything else.
+     Geist / Geist Fallback come from globals.css as a metric-matched local fallback. */
+  --font-display: 'Jost', 'Geist', 'Geist Fallback', system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-sans:    'Roboto', 'Noto Sans', 'Geist', 'Geist Fallback', system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    var(--font-sans);
+  --font-mono:    'Geist Mono', 'Geist Mono Fallback', ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Three primary size stops, plus a separate page-title scale */
+  --font-size-primary:   26px;   /* large metric numbers */
+  --font-size-secondary: 16px;   /* card headings, body */
+  --font-size-tertiary:  12px;   /* labels, badges, breadcrumbs */
+
+  --font-size-title-list:   2rem;    /* 32px — list page h1 */
+  --font-size-title-detail: 2.5rem;  /* 40px — detail page h1 */
+
+  /* Spacing scale (8px base) */
+  --space-1: 0.25rem;  /* 4px  */
+  --space-2: 0.5rem;   /* 8px  */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 2.5rem;   /* 40px */
+
+  /* Motion */
+  --t-fast:   150ms ease;
+  --t-medium: 300ms ease;
+  --t-slow:   1000ms ease-in-out;
+}
+
+/* ============ SEMANTIC ELEMENT STYLES ============ */
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-secondary);
+  line-height: 1.5;
+  margin: 0; padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Page title pattern. List variant: 2rem. Detail variant: 2.5rem. */
+h1, .tulip-page-title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-title-list);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  color: var(--color-foreground);
+  margin: 0;
+  white-space: nowrap;
+}
+h1.detail, .tulip-page-title--detail {
+  font-size: var(--font-size-title-detail);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+h3, .tulip-section-label {
+  font-size: var(--font-size-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted-foreground);
+  margin: 0 0 var(--space-4);
+}
+
+.tulip-breadcrumb {
+  font-size: var(--font-size-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted-foreground);
+}
+
+.tulip-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted-foreground);
+  margin-bottom: var(--space-2);
+}
+
+p { margin: 0 0 var(--space-3); }
+
+code, pre, .tulip-mono {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+/* Focus ring — apply via :focus-visible on interactive elements */
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling (matches app.css) */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-card); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
