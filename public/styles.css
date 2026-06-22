@@ -268,6 +268,24 @@ img {
   box-shadow: 0 4px 12px rgba(114, 92, 12, 0.3);
 }
 
+.btn-primary-white {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: var(--color-accent);
+  color: #ffffff !important;
+  border: 2px solid var(--color-accent);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.btn-primary-white:hover,
+.btn-primary-white:focus {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(114, 92, 12, 0.3);
+}
+
 .btn-secondary {
   background-color: transparent;
   color: var(--color-accent);
@@ -525,6 +543,64 @@ section h2 {
   margin-top: auto;
 }
 
+.pricing-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.price-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-card--featured {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  transform: scale(1.02);
+  position: relative;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+}
+
+.pricing-enterprise-cta {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-lg);
+}
+
+.pricing-enterprise-cta a {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+}
+
 /* ============================================================================
    10. FOOTER
    ============================================================================ */
@@ -718,12 +794,14 @@ section h2 {
   }
 
   .feature-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .pricing-cards {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
 
-  .pricing-card.featured {
+  .pricing-card.featured,
+  .pricing-card--featured {
     transform: scale(1);
   }
 }

@@ -154,6 +154,33 @@
   </footer>
 
   <script>
+    // Parse URL parameters and pre-fill form
+    function prefillFormFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const plan = params.get('plan');
+      const interest = params.get('interest');
+
+      if (interest === 'demo') {
+        const categorySelect = document.getElementById('category');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+
+        // Set category to Sales Inquiry for demos
+        categorySelect.value = 'sales';
+
+        if (plan === 'business') {
+          subjectInput.value = 'Business Plan Demo Request';
+          messageInput.value = 'I am interested in booking a demo of the Business plan. I would like to learn more about the team dashboard, AI auto-approvals, approval workflows, and how it can help manage expenses for my team.';
+        } else if (plan === 'enterprise') {
+          subjectInput.value = 'Enterprise Plan Demo Request';
+          messageInput.value = 'I am interested in booking a demo of the Enterprise plan. I would like to discuss our specific requirements including SSO, data residency, advanced AI approvals, and fraud detection features for our organization.';
+        }
+      }
+    }
+
+    // Call prefill function when page loads
+    document.addEventListener('DOMContentLoaded', prefillFormFromURL);
+
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
