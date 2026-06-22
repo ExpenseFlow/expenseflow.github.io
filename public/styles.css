@@ -601,6 +601,138 @@ section h2 {
   font-weight: var(--font-weight-medium);
 }
 
+.pricing-note {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ============================================================================
+   9b. B2B FINANCE SECTION
+   ============================================================================ */
+
+.b2b-finance {
+  background-color: var(--color-background);
+  padding: var(--spacing-xl) 0;
+  border-top: 3px solid var(--color-accent);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.b2b-finance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.b2b-finance-content h2 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.b2b-finance-content .section-lead {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+  font-size: 1.1rem;
+}
+
+.b2b-finance-roi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.roi-card {
+  background-color: var(--color-surface);
+  border: 3px solid var(--color-accent);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.roi-label {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.roi-metric {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.roi-before {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.roi-arrow {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+.roi-after {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.roi-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+}
+
+.roi-callout {
+  background-color: rgba(191, 161, 0, 0.08);
+  border-left: 4px solid var(--color-accent);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 4px;
+}
+
+.roi-callout p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.roi-callout p:first-child {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.roi-callout p:last-child {
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .b2b-finance-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .roi-metric {
+    flex-wrap: wrap;
+  }
+
+  .roi-after {
+    font-size: 1.5rem;
+  }
+}
+
 /* ============================================================================
    10. FOOTER
    ============================================================================ */
