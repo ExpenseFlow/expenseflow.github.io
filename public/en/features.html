@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EXPENSEFLOW · FEATURES</title>
+  <title>ExpenseFlow · Features</title>
   <meta name="description" content="Both halves of the job: automatic GPS mileage, in-the-moment receipt capture, ±1m accuracy, AI categorization, audit-ready exports and enterprise-grade security." />
-  <link rel="icon" type="image/png" href="assets/app-icon-512.png" />
-  <link rel="stylesheet" href="css/colors_and_type.css" />
-  <link rel="stylesheet" href="css/site.css" />
+  <link rel="icon" type="image/png" href="../assets/app-icon-512.png" />
+  <link rel="stylesheet" href="../css/colors_and_type.css" />
+  <link rel="stylesheet" href="../css/site.css" />
 </head>
 <body>
 
@@ -15,14 +15,14 @@
   <header class="site-nav">
     <div class="wrap site-nav__inner">
       <a class="brand" href="index.html">
-        <img src="assets/app-icon-512.png" alt="" />
-        <b>ExpenseFlow</b>
+        <img class="brand-logo" src="../assets/logo.svg" alt="ExpenseFlow" />
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="features.html">Features</a>
-        <a href="calculator.html">Found-money calculator</a>
+        <a href="calculator.html">Calculator</a>
         <a href="pricing.html">Pricing</a>
-        <a href="index.html#accountants">For accountants</a>
+        <a href="for-business.html">For business</a>
+        <a href="accountants.html">For accountants</a>
       </nav>
       <div class="nav-cta">
         <a class="ghost-link" href="https://get.expenseflow.app">Sign in</a>
@@ -32,6 +32,12 @@
   </header>
 
   <main>
+    <!-- ===================== JURISDICTION NOTICE ===================== -->
+    <div class="jurisdiction-notice">
+      <span class="material-symbols-outlined">info</span>
+      <p>You're viewing <strong>Other Jurisdictions</strong>. GPS mileage tracking, receipt capture, and expense reports all work fully with this selection. Country-specific tax report formats (CRA, IRS) may not be available for your jurisdiction — you can still use the mobile app and web app. We're actively working to add more countries and jurisdictions.</p>
+    </div>
+
     <!-- ===================== PAGE HERO ===================== -->
     <section class="page-hero">
       <div class="wrap wrap--narrow">
@@ -48,16 +54,16 @@
           <div class="split__media">
             <div class="browser">
               <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url">app.expenseflow.app/trips</span></div>
-              <img src="assets/dashboard.png" width="1519" height="823" alt="Trip activity map and recent trips" />
+              <img src="../assets/trips.png" width="1519" height="823" alt="Trip activity map and recent trips" />
             </div>
           </div>
           <div>
             <p class="eyebrow">01 — Tracking</p>
             <h3>Automatic GPS trip tracking.</h3>
-            <p>Activity recognition starts the moment you move — no manual "start trip," no forgotten drives. The MARUTI burst-sampling algorithm fires 3-point GPS bursts on motion, turns and heartbeat, then averages them for accuracy without draining your battery.</p>
+            <p>Tracking starts automatically the moment you move — no manual "start trip," no forgotten drives. A proprietary algorithm increases GPS positioning accuracy without draining your battery.</p>
             <ul class="checklist">
               <li><span class="material-symbols-outlined">check</span> Background tracking that starts itself</li>
-              <li><span class="material-symbols-outlined">check</span> Persistent, honest notification — if you see it, you're earning</li>
+              <li><span class="material-symbols-outlined">check</span> Persistent notification — if you see it, you're tracking</li>
               <li><span class="material-symbols-outlined">check</span> Real-time tax-savings ticker as you drive</li>
             </ul>
           </div>
@@ -67,7 +73,7 @@
           <div class="split__media">
             <div class="browser">
               <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url">app.expenseflow.app/receipts</span></div>
-              <img src="assets/dashboard.png" width="1519" height="823" alt="Receipt capture and pairing" />
+              <img src="../assets/expenses.png" width="1519" height="823" alt="Receipt capture and pairing" />
             </div>
           </div>
           <div>
@@ -77,7 +83,7 @@
             <ul class="checklist">
               <li><span class="material-symbols-outlined">check</span> AI receipt OCR — vendor, amount, date</li>
               <li><span class="material-symbols-outlined">check</span> Auto-paired to the matching trip</li>
-              <li><span class="material-symbols-outlined">check</span> Trip + receipt become one CRA-compliant record</li>
+              <li><span class="material-symbols-outlined">check</span> Trip + receipt become one compliant with your local tax authority record</li>
             </ul>
           </div>
         </div>
@@ -86,7 +92,7 @@
           <div class="split__media">
             <div class="browser">
               <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url">app.expenseflow.app/dashboard</span></div>
-              <img src="assets/dashboard.png" width="1519" height="823" alt="Desktop web app dashboard" />
+              <img src="../assets/dashboard.png" width="1519" height="823" alt="Desktop web app dashboard" />
             </div>
           </div>
           <div>
@@ -108,16 +114,16 @@
       <div class="wrap">
         <div class="split reveal">
           <div>
-            <p class="eyebrow">The competitive moat</p>
-            <h2 class="display h-md">Accuracy you can defend in an audit.</h2>
-            <p class="lede">Cell-tower snapping loses 3–5% of distance on winding roads — and that's deduction gone. ExpenseFlow runs a 5-stage server-side pipeline that turns raw GPS into verifiable waypoints.</p>
+            <p class="eyebrow">Complete capture</p>
+            <h2 class="display h-md">Every kilometre gets logged.</h2>
+            <p class="lede">Basic location apps snap to the nearest tower and quietly lose distance on winding roads. ExpenseFlow captures complete, verifiable routes — nothing missed.</p>
           </div>
           <div style="display:grid;gap:0;align-content:center;">
             <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--ink-line);"><span style="font-family:var(--font-display);font-weight:800;color:var(--gold);width:28px;">1</span><span style="color:var(--on-ink-dim);">GPS logs</span></div>
             <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--ink-line);"><span style="font-family:var(--font-display);font-weight:800;color:var(--gold);width:28px;">2</span><span style="color:var(--on-ink-dim);">Breadcrumbs</span></div>
             <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--ink-line);"><span style="font-family:var(--font-display);font-weight:800;color:var(--gold);width:28px;">3</span><span style="color:var(--on-ink-dim);">Segments</span></div>
             <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--ink-line);"><span style="font-family:var(--font-display);font-weight:800;color:var(--gold);width:28px;">4</span><span style="color:var(--on-ink-dim);">Waypoints (PostGIS)</span></div>
-            <div style="display:flex;align-items:center;gap:14px;padding:14px 0;"><span style="font-family:var(--font-display);font-weight:800;color:var(--gold);width:28px;">5</span><span style="color:var(--on-ink);font-weight:600;">Audit-ready trips, ±1 m</span></div>
+            <div style="display:flex;align-items:center;gap:14px;padding:14px 0;"><span style="font-family:var(--font-display);font-weight:800;color:var(--gold);width:28px;">5</span><span style="color:var(--on-ink);font-weight:600;">Complete trips — 100% of route captured</span></div>
           </div>
         </div>
       </div>
@@ -143,14 +149,13 @@
           </div>
           <div class="feat-card">
             <span class="ico"><span class="material-symbols-outlined">public</span></span>
-            <h3>Multi-jurisdiction tax</h3>
-            <p>CA (CRA), US (IRS), DE, AT and BE rates supported natively, with isolated deployments per region.</p>
+            <h3>Tax support for multiple countries</h3>
+            <p>CA (CRA), US (IRS), DE, AT and BE rates supported, with separate deployments per region.</p>
           </div>
           <div class="feat-card">
             <span class="ico"><span class="material-symbols-outlined">lock</span></span>
             <h3>Security by default</h3>
-            <p>AES-256-GCM field encryption, passwordless magic-link auth, reCAPTCHA Enterprise, and two-layer rate limiting.</p>
-          </div>
+            <p>All data transmission is encrypted. Passwordless authentication, bot protection, and multi-layer security.</p>
           <div class="feat-card">
             <span class="ico"><span class="material-symbols-outlined">admin_panel_settings</span></span>
             <h3>RBAC &amp; audit logs</h3>
@@ -183,19 +188,20 @@
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="index.html"><img src="assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
-          <p>Auto-tracked mileage and receipts, turned into audit-ready reports. Built in Canada for the 2026 CRA rates.</p>
+          <a class="brand" href="index.html"><img src="../assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
+          <p>Auto-tracked mileage and receipts, turned into audit-ready reports. Built for the 2026 local rates.</p>
         </div>
         <div class="footer-col">
           <h4>Product</h4>
           <a href="features.html">Features</a>
-          <a href="calculator.html">Found-money calculator</a>
+          <a href="calculator.html">Calculator</a>
           <a href="pricing.html">Pricing</a>
+          <a href="for-business.html">For business</a>
           <a href="https://get.expenseflow.app">Sign in</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="index.html#accountants">For accountants</a>
+          <a href="accountants.html">For accountants</a>
           <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs</a>
           <a href="mailto:hello@expenseflow.app">Contact</a>
         </div>
@@ -203,11 +209,12 @@
           <h4>Legal</h4>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Use</a>
+          <a href="third-party-notices.html">Third Party Notices</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs Ltd</a>. All rights reserved.</span>
-        <span>Made in Canada</span>
+        <span>Made with ❤ in Canada</span>
       </div>
     </div>
   </footer>
