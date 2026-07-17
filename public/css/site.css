@@ -223,6 +223,12 @@ body { overflow-x: hidden; }
   font-size: 14px; margin-bottom: 11px; transition: color var(--t-fast);
 }
 .footer-col a:hover { color: var(--on-ink); }
+.footer-app-links {
+  display: flex; align-items: center; gap: 6px;
+  color: var(--on-ink-dim); font-size: 14px; margin-bottom: 11px;
+}
+.footer-app-links a { display: inline; margin-bottom: 0; }
+.footer-app-links span:last-of-type { color: var(--ink-line); }
 .footer-bottom {
   margin-top: 48px; padding-top: 24px;
   border-top: 1px solid var(--ink-line);
@@ -585,17 +591,24 @@ input[type="range"].calc-range::-moz-range-thumb {
 
 /* ── Contact form fields ─────────────────────────────── */
 .form-field { display: flex; flex-direction: column; gap: 6px; }
-.form-field label { font-size: .875rem; font-weight: 500; color: var(--fg); }
+.form-field label {
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--color-foreground);
+}
 .form-field__input,
 .form-field__textarea,
 .form-field__select {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid var(--border, rgb(224 224 224));
+  border: 1px solid var(--color-border);
   border-radius: 6px;
-  font-family: inherit;
-  font-size: 1rem;
-  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.5;
+  color: var(--color-foreground);
   background: #fff;
   transition: border-color .15s;
 }
@@ -607,7 +620,13 @@ input[type="range"].calc-range::-moz-range-thumb {
   box-shadow: 0 0 0 3px rgba(199 162 78 / .15);
 }
 .form-field__textarea { resize: vertical; min-height: 120px; }
-.contact-form { display: flex; flex-direction: column; gap: 20px; max-width: 560px; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; max-width: 672px; margin: 0 auto; }
+.contact-form .tulip-btn {
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.5;
+  font-weight: 500;
+}
 .form-feedback { padding: 14px 18px; border-radius: 6px; font-size: .9375rem; }
 .form-feedback--success { background: rgb(240 253 244); border: 1px solid rgb(134 239 172); color: rgb(22 101 52); }
 .form-feedback--error   { background: rgb(255 241 241); border: 1px solid rgb(252 165 165); color: rgb(153 27 27); }
