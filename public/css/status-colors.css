@@ -1,0 +1,89 @@
+/**
+ * Status Colors
+ *
+ * Independent of theme. These colors are used consistently across all themes
+ * for status indicators (trips, receipts, expense reports, etc).
+ *
+ * Each status has:
+ * - Light variant: Low opacity background with darker text
+ * - Dark variant: Solid bright background with white/black text
+ * - High-contrast variant: Bold solid colors with maximum contrast
+ */
+
+/* ==================== LIGHT VARIANT ==================== */
+:root[data-variant='light'] {
+	--color-status-pending-bg: rgba(251, 140, 0, 0.15);
+	--color-status-pending-text: rgb(179 65 0);
+	--color-status-ready-bg: rgba(76, 175, 80, 0.15);
+	--color-status-ready-text: rgb(0 102 51);
+	--color-status-failed-bg: rgba(220, 38, 38, 0.15);
+	--color-status-failed-text: rgb(153 27 27);
+	--color-status-linked-bg: rgba(33, 150, 243, 0.15);
+	--color-status-linked-text: rgb(13 71 161);
+	--color-status-archived-bg: rgba(158, 158, 158, 0.15);
+	--color-status-archived-text: rgb(97 97 97);
+	--color-status-draft-bg: rgba(25, 118, 210, 0.15);
+	--color-status-draft-text: rgb(13 71 161);
+	--color-status-submitted-bg: rgba(251, 140, 0, 0.15);
+	--color-status-submitted-text: rgb(179 65 0);
+	--color-status-approved-bg: rgba(76, 175, 80, 0.15);
+	--color-status-approved-text: rgb(0 102 51);
+	--color-status-rejected-bg: rgba(229, 57, 53, 0.15);
+	--color-status-rejected-text: rgb(153 27 27);
+	--color-status-reviewed-bg: rgba(103, 58, 183, 0.15);
+	--color-status-reviewed-text: rgb(69 39 122);
+	--color-status-reimbursed-bg: rgba(56, 142, 60, 0.15);
+	--color-status-reimbursed-text: rgb(24 75 32);
+}
+
+/* ==================== DARK VARIANT ==================== */
+:root[data-variant='dark'] {
+	--color-status-pending-bg: rgb(251 140 0);
+	--color-status-pending-text: rgb(0 0 0);
+	--color-status-ready-bg: rgb(76 175 80);
+	--color-status-ready-text: rgb(255 255 255);
+	--color-status-failed-bg: rgb(220 38 38);
+	--color-status-failed-text: rgb(255 255 255);
+	--color-status-linked-bg: rgb(33 150 243);
+	--color-status-linked-text: rgb(255 255 255);
+	--color-status-archived-bg: rgb(158 158 158);
+	--color-status-archived-text: rgb(0 0 0);
+	--color-status-draft-bg: rgb(25 118 210);
+	--color-status-draft-text: rgb(255 255 255);
+	--color-status-submitted-bg: rgb(251 140 0);
+	--color-status-submitted-text: rgb(0 0 0);
+	--color-status-approved-bg: rgb(76 175 80);
+	--color-status-approved-text: rgb(255 255 255);
+	--color-status-rejected-bg: rgb(229 57 53);
+	--color-status-rejected-text: rgb(255 255 255);
+	--color-status-reviewed-bg: rgb(103 58 183);
+	--color-status-reviewed-text: rgb(255 255 255);
+	--color-status-reimbursed-bg: rgb(56 142 60);
+	--color-status-reimbursed-text: rgb(255 255 255);
+}
+
+/* ==================== HIGH CONTRAST VARIANT ==================== */
+:root[data-variant='high-contrast'] {
+	--color-status-pending-bg: rgb(255 140 0);
+	--color-status-pending-text: rgb(0 0 0);
+	--color-status-ready-bg: rgb(76 175 80);
+	--color-status-ready-text: rgb(255 255 255);
+	--color-status-failed-bg: rgb(220 38 38);
+	--color-status-failed-text: rgb(255 255 255);
+	--color-status-linked-bg: rgb(33 150 243);
+	--color-status-linked-text: rgb(255 255 255);
+	--color-status-archived-bg: rgb(158 158 158);
+	--color-status-archived-text: rgb(0 0 0);
+	--color-status-draft-bg: rgb(0 0 255);
+	--color-status-draft-text: rgb(255 255 255);
+	--color-status-submitted-bg: rgb(255 140 0);
+	--color-status-submitted-text: rgb(0 0 0);
+	--color-status-approved-bg: rgb(0 255 0);
+	--color-status-approved-text: rgb(0 0 0);
+	--color-status-rejected-bg: rgb(255 0 0);
+	--color-status-rejected-text: rgb(255 255 255);
+	--color-status-reviewed-bg: rgb(153 0 255);
+	--color-status-reviewed-text: rgb(255 255 255);
+	--color-status-reimbursed-bg: rgb(0 200 100);
+	--color-status-reimbursed-text: rgb(255 255 255);
+}
