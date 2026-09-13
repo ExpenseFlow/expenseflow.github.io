@@ -41,10 +41,10 @@
           <h1 class="display h-xl">Stop leaving money on the asphalt.</h1>
           <p class="lede">Every mile auto-logged by GPS. Every receipt captured by camera. ExpenseFlow turns a day of driving into one audit-ready report Finance accepts on the first submission — with zero manual entry.</p>
           <div class="btn-row hero__cta">
-            <a class="tulip-btn tulip-btn--filled btn-lg" href="https://web.expenseflow.app/">Start free — no account needed</a>
+            <a class="tulip-btn tulip-btn--filled btn-lg" href="https://web.expenseflow.app/">Start free</a>
             <a class="tulip-btn tulip-btn--outline btn-lg" href="calculator.html">See what the IRS owes you</a>
           </div>
-          <p class="hero__note"><span class="material-symbols-outlined">check_circle</span> No credit card. No sign-up. Try it with no obligation.</p>
+          <p class="hero__note"><span class="material-symbols-outlined">check_circle</span> No credit card. Try it with no obligation.</p>
         </div>
         <div>
           <div class="browser">
@@ -193,7 +193,7 @@
             <ul class="checklist">
               <li><span class="material-symbols-outlined">check</span> Enhanced GPS tracking catches every turn and route change</li>
               <li><span class="material-symbols-outlined">check</span> No missed drives — tracking starts the moment you move</li>
-              <li><span class="material-symbols-outlined">check</span> Encrypted, time-stamped data behind every claim for audit confidence</li>
+              <li><span class="material-symbols-outlined">check</span> Strong data privacy; data deleted after calculations</li>
             </ul>
           </div>
         </div>
@@ -256,12 +256,6 @@
                 <td class="col-us val-yes"><span class="material-symbols-outlined">check</span></td>
               </tr>
               <tr>
-                <td>Track before signing up</td>
-                <td class="val-no"><span class="material-symbols-outlined">close</span></td>
-                <td class="val-no"><span class="material-symbols-outlined">close</span></td>
-                <td class="col-us val-yes"><span class="material-symbols-outlined">check</span></td>
-              </tr>
-              <tr>
                 <td>IRS-compliant export</td>
                 <td class="val-no"><span class="material-symbols-outlined">close</span></td>
                 <td class="val-no"><span class="material-symbols-outlined">close</span></td>
@@ -295,12 +289,13 @@
               </div>
               <div class="calc__result">
                 <div class="rlab">Your annual IRS-deductible mileage is worth</div>
-                <div class="ramt" id="teaserAmt">$11,388</div>
-                <div class="rsub">at the 2026 IRS rate. Track it compliantly and claim it all.</div>
+                <div class="ramt" id="teaserAmt">$11,856</div>
+                <div class="rsub">at the current 2026 IRS rate. Track it compliantly and claim it all.</div>
               </div>
             </div>
           </div>
         </div>
+        <p class="center" style="color:var(--on-ink-dim);font-size:13px;margin-top:20px;">* The 2026 IRS business mileage rate is 72.5¢/mile Jan–Jun and 76¢/mile Jul–Dec. This estimate uses the current rate.</p>
       </div>
     </section>
 
@@ -368,7 +363,7 @@
         <div class="section-head center reveal">
           <p class="eyebrow center-line">Pricing</p>
           <h2 class="display h-lg">IRS-compliant reporting for less than your daily coffee.</h2>
-          <p class="lede">Pro is $7/month. At the 2026 IRS rate of $0.67/miles, that's covered by just 17 work miles. Proper reporting that's worth it.</p>
+          <p class="lede">Pro is $7/month. At the current 2026 IRS rate of $0.76/mile, that's covered by about 10 work miles. Proper reporting that's worth it.</p>
         </div>
         <div class="price-grid reveal">
           <div class="price-card">
@@ -443,7 +438,7 @@
           </details>
           <details>
             <summary>What about employee privacy and location data? <span class="material-symbols-outlined">add</span></summary>
-            <p>Location history stays on the employee's device. ExpenseFlow keeps only the trip summary — date, distance, time. Employees stay in control and can turn tracking off anytime.</p>
+            <p>ExpenseFlow uses strong data privacy practices and deletes data after calculations. Employees stay in control and can turn tracking off anytime.</p>
           </details>
           <details>
             <summary>Will it drain employees' batteries? <span class="material-symbols-outlined">add</span></summary>
@@ -470,7 +465,7 @@
       <div class="wrap wrap--narrow">
         <p class="eyebrow center-line reveal">Drive first, decide later</p>
         <h2 class="display h-lg reveal">No obligation to try.</h2>
-        <p class="lede reveal">No credit card. No sign-up form. Download, drive, and watch how it works. Create an account when you're ready — or don't. You stay in control.</p>
+        <p class="lede reveal">No credit card required. Download, drive, and watch how it works. You stay in control.</p>
         <div class="btn-row reveal" style="justify-content:center;">
           <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/">Start free</a>
           <a class="tulip-btn tulip-btn--outline btn-lg" href="calculator.html">Calculate my deduction</a>
@@ -559,7 +554,7 @@
       function update() {
         var weekly = +range.value;
         miles.textContent = weekly;
-        amt.textContent = fmt(weekly * 52 * 0.67);
+        amt.textContent = fmt(weekly * 52 * 0.76);
       }
       range.addEventListener('input', update);
       update();
