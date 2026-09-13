@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ExpenseFlow · Calculator</title>
-  <meta name="description" content="Estimate your annual mileage deduction at the 2026 IRS rate of $0.67/miles. Most drivers underestimate how much they're entitled to claim." />
+  <meta name="description" content="Estimate your annual mileage deduction at the current 2026 IRS rate of $0.76/mile. Most drivers underestimate how much they're entitled to claim." />
   <link rel="icon" type="image/png" href="../assets/app-icon-512.png" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
@@ -38,7 +38,7 @@
         <div class="section-head center" style="margin-bottom:40px;">
           <p class="eyebrow center-line">Calculator</p>
           <h1 class="display h-xl" style="color:var(--on-ink);">How much can you claim this year?</h1>
-          <p class="lede" style="color:var(--on-ink-dim);">Most drivers underestimate how much driving they can claim. Estimate your deduction at the 2026 IRS rate of <span class="gold">$0.67/miles</span> — then track it in a IRS-compliant format.</p>
+          <p class="lede" style="color:var(--on-ink-dim);">Most drivers underestimate how much driving they can claim. Estimate your deduction at the current 2026 IRS rate of <span class="gold">$0.76/mile</span> — then track it in an IRS-compliant format.</p>
         </div>
 
         <div class="calc">
@@ -75,12 +75,12 @@
 
           <div class="calc__result">
             <div class="rlab">Your IRS-claimable mileage is worth</div>
-            <div class="ramt" id="vTotal">$11,388</div>
-            <div class="rsub" id="vSub">this year, if tracked in a IRS-compliant format.</div>
+            <div class="ramt" id="vTotal">$10,944</div>
+            <div class="rsub" id="vSub">this year, if tracked in an IRS-compliant format.</div>
 
             <div class="rbreak">
-              <div><span>Annual business distance</span><b id="vDist">15,600 miles</b></div>
-              <div><span>At the 2026 IRS rate</span><b>$0.67 / miles</b></div>
+              <div><span>Annual business distance</span><b id="vDist">14,400 miles</b></div>
+              <div><span>At the 2026 IRS rate</span><b>$0.76 / mile</b></div>
               <div><span id="vLossLabel">Lost to cell-tower rounding</span><b class="gold" id="vLoss">$0</b></div>
             </div>
 
@@ -89,6 +89,7 @@
         </div>
 
         <p class="center" style="color:var(--on-ink-dim);font-size:13px;margin-top:20px;">Estimate only. Your deduction depends on your business-use percentage and tax situation — talk to your accountant.</p>
+        <p class="center" style="color:var(--on-ink-dim);font-size:13px;margin-top:8px;">* The 2026 IRS business mileage rate is 72.5¢/mile Jan–Jun and 76¢/mile Jul–Dec. This estimate uses the current rate.</p>
       </div>
     </section>
 
@@ -123,7 +124,7 @@
     <section class="section section--ink cta-band section--tight">
       <div class="wrap wrap--narrow">
         <h2 class="display h-lg">See it in action.</h2>
-        <p class="lede">Download ExpenseFlow, drive, and see how it works — no account, no obligation. Lock in the money once you're ready.</p>
+        <p class="lede">Download ExpenseFlow, drive, and see how it works — no obligation. Lock in the money once you're ready.</p>
         <div class="btn-row" style="justify-content:center;">
           <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/">Start free</a>
           <a class="tulip-btn tulip-btn--outline btn-lg" href="pricing.html">See pricing</a>
@@ -152,7 +153,7 @@
           <h4>Company</h4>
           <a href="https://aryabhatta.ca" target="_blank" rel="noopener">Aryabhatta Labs</a>
           <a href="/contact">Contact</a>
-          <a href="https://expenseflow.discourse.group" target="_blank" rel="noopener">Support Forum</a>
+          <a href="/contact/">Support</a>
           <a href="/docs">Documentation</a>
           <div class="footer-app-links">
             <span>App Downloads</span>
@@ -186,7 +187,7 @@
     })();
 
     (function () {
-      var RATE = 0.67;
+      var RATE = 0.76;
       var rKm = document.getElementById('rKm');
       var rWeeks = document.getElementById('rWeeks');
       var vKm = document.getElementById('vKm');
