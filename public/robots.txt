@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://expenseflow.app/sitemap.xml

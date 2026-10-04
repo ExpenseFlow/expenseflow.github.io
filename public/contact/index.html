@@ -30,13 +30,13 @@
   <header class="site-nav">
     <div class="wrap site-nav__inner">
       <a class="brand" href="../index.html">
-        <img class="brand-logo" src="../assets/logo.svg" alt="ExpenseFlow" />
+        <img class="brand-logo" src="../assets/logo.png" alt="ExpenseFlow" />
       </a>
       <nav class="nav-links" aria-label="Main">
-        <a href="../features.html">Features</a>
-        <a href="../calculator.html">Found-money calculator</a>
-        <a href="../pricing.html">Pricing</a>
-        <a href="../index.html#accountants">For accountants</a>
+        <a class="jurisdiction-link" data-page="features.html" href="../en/features.html">Features</a>
+        <a class="jurisdiction-link" data-page="calculator.html" href="../en/calculator.html">Found-money calculator</a>
+        <a class="jurisdiction-link" data-page="pricing.html" href="../en/pricing.html">Pricing</a>
+        <a class="jurisdiction-link" data-page="accountants.html" href="../en/accountants.html">For accountants</a>
       </nav>
       <div class="nav-cta">
         <a class="ghost-link" href="https://web.expenseflow.app/">Sign in</a>
@@ -118,10 +118,10 @@
         </div>
         <div class="footer-col">
           <h4>Product</h4>
-          <a href="../features.html">Features</a>
-          <a href="../calculator.html">Found-money calculator</a>
-          <a href="../pricing.html">Pricing</a>
-          <a href="../index.html#accountants">For accountants</a>
+          <a class="jurisdiction-link" data-page="features.html" href="../en/features.html">Features</a>
+          <a class="jurisdiction-link" data-page="calculator.html" href="../en/calculator.html">Found-money calculator</a>
+          <a class="jurisdiction-link" data-page="pricing.html" href="../en/pricing.html">Pricing</a>
+          <a class="jurisdiction-link" data-page="accountants.html" href="../en/accountants.html">For accountants</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -233,6 +233,40 @@
         errorMsg.scrollIntoView({ behavior: 'smooth' });
       });
     });
+  </script>
+
+  <script>
+    // Point Features/Calculator/Pricing/For-accountants links at the visitor's jurisdiction.
+    // Default (href already set above) is en/ — kept as-is if detection fails or is inconclusive.
+    (function () {
+      var JURISDICTION_FOLDERS = { CA: 'ca-en', US: 'us-en' };
+
+      function applyJurisdiction(folder) {
+        document.querySelectorAll('.jurisdiction-link').forEach(function (a) {
+          a.href = '../' + folder + '/' + a.dataset.page;
+        });
+      }
+
+      var saved = localStorage.getItem('expenseflow_country');
+      if (saved && JURISDICTION_FOLDERS[saved]) {
+        applyJurisdiction(JURISDICTION_FOLDERS[saved]);
+        return;
+      }
+      if (saved === 'en') {
+        return; // default links already point at en/
+      }
+
+      fetch('https://ipapi.co/json/', { headers: { 'Accept': 'application/json' } })
+        .then(function (response) { return response.ok ? response.json() : null; })
+        .then(function (data) {
+          if (data && JURISDICTION_FOLDERS[data.country_code]) {
+            applyJurisdiction(JURISDICTION_FOLDERS[data.country_code]);
+          }
+        })
+        .catch(function () {
+          // keep default en/ links
+        });
+    })();
   </script>
 
 </body>
