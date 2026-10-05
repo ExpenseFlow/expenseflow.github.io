@@ -10,9 +10,8 @@
   var APP_STORE_URL = 'https://apps.apple.com/ca/app/expenseflow/id6752229092';
   var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=ca.aryabhatta.expenseflow';
 
-  // Apple Search Ads provider token — not yet issued. Fill in once known;
-  // `pt` is omitted from Apple store links while this stays empty.
-  var APPLE_ADS_PROVIDER_TOKEN = '';
+  // App Store Connect provider token; App Store Connect ignores `ct` without it.
+  var APPLE_ADS_PROVIDER_TOKEN = '128102995';
 
   var UTM_STORAGE_KEY = 'ef_utm';
 
