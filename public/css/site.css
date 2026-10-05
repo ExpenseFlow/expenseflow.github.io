@@ -269,6 +269,10 @@ body { overflow-x: hidden; }
 }
 .hero__note .material-symbols-outlined { font-size: 18px; color: var(--gold); }
 
+.store-badges { margin-top: var(--space-4); }
+.store-badge { gap: 8px; padding: 0.6rem 1.1rem; font-size: 0.85rem; }
+.store-badge svg { width: 18px; height: 18px; flex: none; }
+
 /* Browser frame holding the product screenshot */
 .browser {
   border-radius: 10px;

@@ -36,7 +36,7 @@
       </nav>
       <div class="nav-cta">
         <a class="ghost-link" href="https://web.expenseflow.app/">Sign in</a>
-        <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/">Start free</a>
+        <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/" data-platform-cta data-cta="nav">Start free</a>
       </div>
     </div>
   </header>
@@ -181,7 +181,7 @@
         <h2 class="display h-lg">Every mile, every receipt, one record.</h2>
         <p class="lede">Track your first 5 trips free — no credit card required.</p>
         <div class="btn-row" style="justify-content:center;">
-          <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/">Start free</a>
+          <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/" data-platform-cta data-cta="closing">Start free</a>
           <a class="tulip-btn tulip-btn--outline btn-lg" href="pricing.html">See pricing</a>
         </div>
       </div>
@@ -212,9 +212,9 @@
           <a href="/docs">Documentation</a>
           <div class="footer-app-links">
             <span>App Downloads</span>
-            <a href="https://apps.apple.com/ca/app/expenseflow/id6752229092" target="_blank" rel="noopener">iOS</a>
+            <a href="https://apps.apple.com/ca/app/expenseflow/id6752229092" target="_blank" rel="noopener" data-cta="footer-ios">iOS</a>
             <span>|</span>
-            <a href="https://play.google.com/store/apps/details?id=ca.aryabhatta.expenseflow" target="_blank" rel="noopener">Android</a>
+            <a href="https://play.google.com/store/apps/details?id=ca.aryabhatta.expenseflow" target="_blank" rel="noopener" data-cta="footer-android">Android</a>
           </div>
           <a href="https://status.expenseflow.app/" target="_blank" rel="noopener">Server Status</a>
         </div>
@@ -251,5 +251,6 @@
       els.forEach(function (e) { io.observe(e); });
     })();
   </script>
+  <script defer src="/assets/js/store-links.js"></script>
 </body>
 </html>
