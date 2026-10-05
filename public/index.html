@@ -340,7 +340,7 @@
     function redirect(code) {
       if (SUPPORTED_COUNTRIES[code]) {
         localStorage.setItem('expenseflow_country', code);
-        window.location.href = SUPPORTED_COUNTRIES[code].url;
+        window.location.href = SUPPORTED_COUNTRIES[code].url + location.search + location.hash;
       }
     }
 
