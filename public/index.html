@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ExpenseFlow</title>
+  <meta name="description" content="ExpenseFlow automatically tracks mileage by GPS and captures receipts by camera, turning a day of driving into an audit-ready expense report. Select your country to get started." />
+  <link rel="icon" type="image/png" href="./assets/app-icon-512.png" />
+  <link rel="canonical" href="https://expenseflow.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://expenseflow.app/" />
+  <meta property="og:title" content="ExpenseFlow" />
+  <meta property="og:description" content="ExpenseFlow automatically tracks mileage by GPS and captures receipts by camera, turning a day of driving into an audit-ready expense report. Select your country to get started." />
+  <meta property="og:site_name" content="ExpenseFlow" />
   <style>
     * {
       margin: 0;
@@ -187,6 +195,18 @@
   </style>
 </head>
 <body>
+  <noscript>
+    <div style="max-width:600px;margin:60px auto;padding:0 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;text-align:center;">
+      <h2>ExpenseFlow</h2>
+      <p>ExpenseFlow automatically tracks mileage by GPS and captures receipts by camera, turning a day of driving into an audit-ready expense report.</p>
+      <p>Select your country to get started:</p>
+      <p>
+        <a href="./ca-en/">Canada</a> &middot;
+        <a href="./us-en/">United States</a> &middot;
+        <a href="./en/">Other Jurisdictions</a>
+      </p>
+    </div>
+  </noscript>
   <div class="container">
     <div class="logo">
       <svg width="80" height="80" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -320,7 +340,7 @@
     function redirect(code) {
       if (SUPPORTED_COUNTRIES[code]) {
         localStorage.setItem('expenseflow_country', code);
-        window.location.href = SUPPORTED_COUNTRIES[code].url;
+        window.location.href = SUPPORTED_COUNTRIES[code].url + location.search + location.hash;
       }
     }
 

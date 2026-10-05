@@ -6,6 +6,16 @@
   <title>ExpenseFlow · Pricing</title>
   <meta name="description" content="Simple pricing for ExpenseFlow. Start free, upgrade to Pro at $7/mo or Business at $10/user/mo. Pro pays for itself in one trip." />
   <link rel="icon" type="image/png" href="../assets/app-icon-512.png" />
+  <link rel="canonical" href="https://expenseflow.app/ca-en/pricing.html" />
+  <link rel="alternate" hreflang="en" href="https://expenseflow.app/en/pricing.html" />
+  <link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/pricing.html" />
+  <link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/pricing.html" />
+  <link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://expenseflow.app/ca-en/pricing.html" />
+  <meta property="og:title" content="ExpenseFlow · Pricing" />
+  <meta property="og:description" content="Simple pricing for ExpenseFlow. Start free, upgrade to Pro at $7/mo or Business at $10/user/mo. Pro pays for itself in one trip." />
+  <meta property="og:site_name" content="ExpenseFlow" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
 </head>
@@ -15,7 +25,7 @@
   <header class="site-nav">
     <div class="wrap site-nav__inner">
       <a class="brand" href="index.html">
-        <img class="brand-logo" src="../assets/logo.svg" alt="ExpenseFlow" />
+        <img class="brand-logo" src="../assets/logo.png" alt="ExpenseFlow" />
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="features.html">Features</a>
@@ -26,7 +36,7 @@
       </nav>
       <div class="nav-cta">
         <a class="ghost-link" href="https://web.expenseflow.app/">Sign in</a>
-        <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/">Start free</a>
+        <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/" data-platform-cta data-cta="nav">Start free</a>
       </div>
     </div>
   </header>
@@ -57,7 +67,7 @@
             <p class="blurb">For individuals trying it out, with no strings attached.</p>
             <div class="amt">$0</div>
             <div class="per">5 trips + 5 receipts / month</div>
-            <a class="tulip-btn tulip-btn--outline" href="https://web.expenseflow.app/">Start free</a>
+            <a class="tulip-btn tulip-btn--outline" href="https://web.expenseflow.app/" data-platform-cta data-cta="pricing-free">Start free</a>
             <ul>
               <li><span class="material-symbols-outlined">check</span> Automatic GPS trip tracking</li>
               <li><span class="material-symbols-outlined">check</span> Receipt capture &amp; OCR</li>
@@ -73,7 +83,7 @@
             <p class="blurb">For solo contractors, agents and freelancers.</p>
             <div class="amt"><span data-price data-monthly="7" data-annual="5.83">$7</span> <small>/ mo</small></div>
             <div class="per" data-per data-monthly="per user, billed monthly" data-annual="per user — $70 billed yearly">per user, billed monthly</div>
-            <a class="tulip-btn tulip-btn--outline" href="https://web.expenseflow.app/">Get Pro</a>
+            <a class="tulip-btn tulip-btn--outline" href="https://web.expenseflow.app/" data-platform-cta data-cta="pricing-pro">Get Pro</a>
             <ul>
               <li><span class="material-symbols-outlined">check</span> Unlimited trips &amp; receipts</li>
               <li><span class="material-symbols-outlined">check</span> CRA-ready export (PDF / CSV)</li>
@@ -236,7 +246,7 @@
         <h2 class="display h-lg">Start free. Upgrade when you're ready.</h2>
         <p class="lede">Your first 5 trips are on us — no credit card required.</p>
         <div class="btn-row" style="justify-content:center;">
-          <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/">Start free</a>
+          <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/" data-platform-cta data-cta="closing">Start free</a>
           <a class="tulip-btn tulip-btn--outline btn-lg" href="calculator.html">Calculate my deduction</a>
         </div>
       </div>
@@ -267,9 +277,9 @@
           <a href="/docs">Documentation</a>
           <div class="footer-app-links">
             <span>App Downloads</span>
-            <a href="https://apps.apple.com/ca/app/expenseflow/id6752229092" target="_blank" rel="noopener">iOS</a>
+            <a href="https://apps.apple.com/ca/app/expenseflow/id6752229092" target="_blank" rel="noopener" data-cta="footer-ios">iOS</a>
             <span>|</span>
-            <a href="https://play.google.com/store/apps/details?id=ca.aryabhatta.expenseflow" target="_blank" rel="noopener">Android</a>
+            <a href="https://play.google.com/store/apps/details?id=ca.aryabhatta.expenseflow" target="_blank" rel="noopener" data-cta="footer-android">Android</a>
           </div>
           <a href="https://status.expenseflow.app/" target="_blank" rel="noopener">Server Status</a>
         </div>
@@ -318,5 +328,6 @@
       render();
     })();
   </script>
+  <script defer src="/assets/js/store-links.js"></script>
 </body>
 </html>
