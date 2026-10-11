@@ -9,6 +9,7 @@ posthog.init('phc_vTm5Uhq2keAJiEB6YG7pzygKge4LmqvsFvzstjaGAh95', {
   api_host: 'https://eu.i.posthog.com',
   defaults: '2026-05-30',
   person_profiles: 'identified_only',
+  persistence: 'localStorage',
   session_recording: {
     maskAllInputs: true
   }
