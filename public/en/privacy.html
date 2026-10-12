@@ -51,7 +51,7 @@
       <div class="wrap wrap--narrow">
         <p class="eyebrow center-line">Legal</p>
         <h1 class="display h-xl">Privacy Policy</h1>
-        <p class="lede">Last updated: 2026-10-11</p>
+        <p class="lede">Last updated: 2026-10-18</p>
       </div>
     </section>
 
@@ -132,6 +132,7 @@
           <li><strong>Purpose:</strong> Error tracking and application performance monitoring</li>
           <li><strong>Data Shared:</strong> Error logs, crash reports, anonymized usage patterns</li>
           <li><strong>Note:</strong> We remove sensitive information before sending data to Sentry</li>
+          <li><strong>Web app:</strong> Used only if you allow "Error and performance monitoring" in Cookie settings</li>
           <li><strong>Privacy Policy:</strong> <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy Policy</a></li>
         </ul>
 
@@ -162,6 +163,22 @@
           <li><strong>Data Shared:</strong> Page views, clicks, scroll behavior, device and browser information, approximate location derived from IP address, and campaign parameters (such as UTM tags)</li>
           <li><strong>Note:</strong> Text entered into form fields is masked and not captured. No cookies are used; a visitor identifier is stored in your browser's local storage instead. Data is processed and stored on PostHog's EU servers.</li>
           <li><strong>Privacy Policy:</strong> <a href="https://posthog.com/privacy" target="_blank">PostHog Privacy Policy</a></li>
+        </ul>
+
+        <h3>Grafana Labs</h3>
+        <ul>
+          <li><strong>Purpose:</strong> Application logs and frontend performance monitoring</li>
+          <li><strong>Data Shared:</strong> Error and diagnostic logs, page performance data, user ID and email for logged-in users</li>
+          <li><strong>Data Location:</strong> Canada (Grafana Cloud region prod-ca-east-0)</li>
+          <li><strong>Web app:</strong> Browser monitoring is used only if you allow "Error and performance monitoring" in Cookie settings</li>
+          <li><strong>Privacy Policy:</strong> <a href="https://grafana.com/legal/privacy-policy/" target="_blank">Grafana Labs Privacy Policy</a></li>
+        </ul>
+
+        <h3>Google reCAPTCHA</h3>
+        <ul>
+          <li><strong>Purpose:</strong> Protecting the sign-in page from automated abuse</li>
+          <li><strong>Data Shared:</strong> Device and browser information, IP address, interaction data on the sign-in page</li>
+          <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
         </ul>
 
         <p>We do not share your data with any other third parties without your explicit consent.</p>
@@ -227,6 +244,7 @@
           <li><strong>Delete Your Data:</strong> Access Settings > Delete Account to permanently delete your account and all data. This includes trips, expenses, GPS logs, and personal information. Your access is revoked immediately; the underlying data is purged from our systems within 30 days.</li>
           <li><strong>Stop Location Tracking:</strong> Disable Trip Tracking anytime by turning off the "Track Drive" feature. You can re-enable it whenever needed.</li>
           <li><strong>Disable Error Reporting:</strong> Access Settings > Privacy to disable Sentry error reporting. The app functions normally without error reporting enabled.</li>
+          <li><strong>Cookie Settings (web app):</strong> Open Cookie settings (Settings > Preferences, Support > Legal, or the sign-in page) to allow or withdraw error and performance monitoring at any time.</li>
         </ul>
 
         <h3>CCPA Rights (California Residents)</h3>
@@ -240,10 +258,34 @@
         <p>To exercise these rights, contact us at <a href="mailto:privacy@aryabhatta.ca">privacy@aryabhatta.ca</a> or use in-app settings.</p>
 
         <!-- 10. Cookies -->
-        <h2>10. Cookies</h2>
-        <p>A cookie is a small computer file or piece of information that may be stored in your computer's hard drive when you visit our websites. We may use cookies to improve our website's functionality and in some cases, to provide visitors with a customized online experience.</p>
-        <p>Cookies are widely used and most web browsers are configured initially to accept cookies automatically. You may change your Internet browser settings to prevent your computer from accepting cookies or to notify you when you receive a cookie so that you may decline its acceptance. Please note, however, if you disable cookies, you may not experience optimal performance of our website.</p>
-        <p>We use PostHog to analyze how visitors use our marketing website, including which pages are viewed and which links are clicked. This helps us understand how visitors reach us and where they run into difficulty. PostHog does not set cookies; it stores a visitor identifier in your browser's local storage instead, which is not transmitted with every page request the way a cookie is. See the PostHog entry above for details on what is collected.</p>
+        <h2>10. Cookies and Similar Technologies
+        <p>Cookies and similar technologies (browser local storage, session storage and IndexedDB) store small pieces of information on your device. The ExpenseFlow web app uses them in two categories. When you first visit, a banner lets you accept or reject optional cookies. You can change your choice at any time in <strong>Cookie settings</strong> (Settings &gt; Preferences, Support &gt; Legal, or the sign-in page). If you are signed in, we record your choice and the time you made it as proof of consent.</p>
+
+        <h3>Strictly necessary (always on)</h3>
+        <p>These are required for the service to work and do not need your consent.</p>
+        <ul>
+          <li><strong>session_token, session_jwt</strong> (cookies, up to 31 days): keep you signed in. Secure and HttpOnly.</li>
+          <li><strong>PARAGLIDE_LOCALE</strong> (cookie, up to 400 days): remembers your language.</li>
+          <li><strong>sidebar:state</strong> (cookie, 7 days): remembers whether the sidebar is open.</li>
+          <li><strong>ef_cookie_consent</strong> (local storage, 12 months): remembers your cookie choice.</li>
+          <li><strong>APP_CONFIG, EXPENSEFLOW_SESSION_BUNDLE</strong> (local storage): app configuration and the server your account uses.</li>
+          <li><strong>Sign-in tokens for the mobile app hand-off and demo accounts</strong> (local storage): complete sign-in.</li>
+          <li><strong>Dismissed notices, form drafts, retry limits and referral code</strong> (local and session storage): remember that you closed a notice, keep a multi-step form while you complete it, limit receipt re-scans, and apply an accountant referral at sign-up.</li>
+          <li><strong>expenseflow-logs</strong> (IndexedDB): a local diagnostic log, cleared daily. It stays on your device and is never sent to us.</li>
+          <li><strong>Google reCAPTCHA</strong> (sign-in page only): protects sign-in from automated abuse.</li>
+        </ul>
+
+        <h3>Error and performance monitoring (optional)</h3>
+        <p>Used only if you allow it. These send error reports and performance data so we can find and fix problems.</p>
+        <ul>
+          <li><strong>Sentry:</strong> error and performance monitoring.</li>
+          <li><strong>Grafana (Faro and logs):</strong> frontend performance monitoring and diagnostic logs. Uses browser storage for a monitoring session identifier.</li>
+        </ul>
+
+        <h3>Marketing website analytics</h3>
+        <p>Our marketing website uses PostHog to analyze how visitors use it, including which pages are viewed and which links are clicked. PostHog does not set cookies; it stores a visitor identifier in your browser's local storage instead. See the PostHog entry in Section 4 for details on what is collected.</p>
+
+        <p>We do not use advertising or cross-site tracking cookies. You can also block or delete cookies in your browser settings. Blocking strictly necessary cookies will prevent you from signing in.</p>
 
         <!-- 11. Other Websites -->
         <h2>11. Other Websites</h2>
