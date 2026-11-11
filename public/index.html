@@ -13,6 +13,23 @@
   <meta property="og:title" content="ExpenseFlow" />
   <meta property="og:description" content="ExpenseFlow automatically tracks mileage by GPS and captures receipts by camera, turning a day of driving into an audit-ready expense report. Select your country to get started." />
   <meta property="og:site_name" content="ExpenseFlow" />
+  <script>
+    // Auto-redirect mode: never paint the splash/spinner. Returning visitors are
+    // redirected before first paint; new visitors see nothing while the country
+    // is detected. The selector UI only shows with ?select=1.
+    (function () {
+      var p = new URLSearchParams(location.search);
+      if (p.get('select') === '1') return;
+      document.documentElement.className = 'auto';
+      try {
+        var saved = localStorage.getItem('expenseflow_country');
+        var urls = { CA: './ca-en/', US: './us-en/', en: './en/' };
+        if (saved && urls[saved]) {
+          location.replace(urls[saved] + location.search + location.hash);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <style>
     * {
       margin: 0;
@@ -166,6 +183,31 @@
       }
     }
 
+    /* Auto-redirect mode: no card, just a tiny spinner that only appears
+       if detection takes longer than ~0.4s (so fast redirects show nothing). */
+    .mini-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.12);
+      border-top-color: #d4a574;
+      border-radius: 50%;
+    }
+
+    html.auto .container {
+      display: none;
+    }
+
+    html.auto .mini-spinner {
+      display: block;
+      animation: spin 0.7s linear infinite, fadeIn 0.2s ease 0.4s both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .error {
       color: #d32f2f;
       font-size: 14px;
@@ -208,6 +250,7 @@
       </p>
     </div>
   </noscript>
+  <div class="mini-spinner" role="status" aria-label="Loading"></div>
   <div class="container">
     <div class="logo">
       <svg width="80" height="80" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -220,7 +263,7 @@
       <h1>Welcome to ExpenseFlow</h1>
       <p class="subtitle">Select your country to get started</p>
 
-      <div class="loading" id="loading">
+      <div class="loading" id="loading" style="display: none;">
         <span class="spinner"></span>Detecting your location...
       </div>
 
@@ -341,7 +384,7 @@
     function redirect(code) {
       if (SUPPORTED_COUNTRIES[code]) {
         localStorage.setItem('expenseflow_country', code);
-        window.location.href = SUPPORTED_COUNTRIES[code].url + location.search + location.hash;
+        window.location.replace(SUPPORTED_COUNTRIES[code].url + location.search + location.hash);
       }
     }
 

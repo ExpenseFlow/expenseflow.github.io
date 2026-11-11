@@ -198,8 +198,30 @@ body { overflow-x: hidden; }
 }
 .nav-toggle { display: none; }
 
+/* Mobile: nav links drop to a second, horizontally scrollable row under the brand bar. */
 @media (max-width: 880px) {
-  .nav-links, .nav-cta .ghost-link { display: none; }
+  .site-nav__inner { height: auto; flex-wrap: wrap; gap: 0 12px; }
+  .brand { height: 68px; }
+  .nav-cta { height: 68px; }
+  .nav-links {
+    order: 3;
+    flex: 0 0 100%;
+    margin: 0;
+    gap: 22px;
+    padding: 0 0 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { flex: 0 0 auto; padding: 6px 0; }
+  .nav-links a.active::after { bottom: 0; }
+}
+@media (max-width: 560px) {
+  .nav-cta .ghost-link { display: none; }
 }
 
 /* =====================================================================
