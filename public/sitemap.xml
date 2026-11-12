@@ -2,180 +2,243 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://expenseflow.app/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/index.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/index.html" />
+    <loc>https://www.expenseflow.app/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/us-en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/index.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/index.html" />
+    <loc>https://www.expenseflow.app/en/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/" />
   </url>
   <url>
-    <loc>https://expenseflow.app/ca-en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/index.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/index.html" />
+    <loc>https://www.expenseflow.app/us-en/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/" />
   </url>
   <url>
-    <loc>https://expenseflow.app/en/features.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/features.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/features.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/features.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/features.html" />
+    <loc>https://www.expenseflow.app/ca-en/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/" />
   </url>
   <url>
-    <loc>https://expenseflow.app/us-en/features.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/features.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/features.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/features.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/features.html" />
+    <loc>https://www.expenseflow.app/en/features.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/features.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/features.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/features.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/features.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/ca-en/features.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/features.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/features.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/features.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/features.html" />
+    <loc>https://www.expenseflow.app/us-en/features.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/features.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/features.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/features.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/features.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/en/calculator.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/calculator.html" />
+    <loc>https://www.expenseflow.app/ca-en/features.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/features.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/features.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/features.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/features.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/us-en/calculator.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/calculator.html" />
+    <loc>https://www.expenseflow.app/en/calculator.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/calculator.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/ca-en/calculator.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/calculator.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/calculator.html" />
+    <loc>https://www.expenseflow.app/us-en/calculator.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/calculator.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/en/pricing.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/pricing.html" />
+    <loc>https://www.expenseflow.app/ca-en/calculator.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/calculator.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/us-en/pricing.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/pricing.html" />
+    <loc>https://www.expenseflow.app/en/pricing.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/pricing.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/ca-en/pricing.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/pricing.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/pricing.html" />
+    <loc>https://www.expenseflow.app/us-en/pricing.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/pricing.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/en/for-business.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/for-business.html" />
+    <loc>https://www.expenseflow.app/ca-en/pricing.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/pricing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/pricing.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/us-en/for-business.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/for-business.html" />
+    <loc>https://www.expenseflow.app/en/for-business.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/for-business.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/ca-en/for-business.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/for-business.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/for-business.html" />
+    <loc>https://www.expenseflow.app/us-en/for-business.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/for-business.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/en/accountants.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/accountants.html" />
+    <loc>https://www.expenseflow.app/ca-en/for-business.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/for-business.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/for-business.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/us-en/accountants.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/accountants.html" />
+    <loc>https://www.expenseflow.app/en/accountants.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/accountants.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/ca-en/accountants.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://expenseflow.app/en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/accountants.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/accountants.html" />
+    <loc>https://www.expenseflow.app/us-en/accountants.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/accountants.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/index.html</loc>
+    <loc>https://www.expenseflow.app/ca-en/accountants.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/accountants.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/accountants.html" />
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/accountant.html</loc>
+    <loc>https://www.expenseflow.app/us-en/guides/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/approvals.html</loc>
+    <loc>https://www.expenseflow.app/us-en/guides/irs-mileage-log-requirements.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/archive.html</loc>
+    <loc>https://www.expenseflow.app/us-en/guides/mileage-tracker-for-self-employed.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/expenses.html</loc>
+    <loc>https://www.expenseflow.app/ca-en/guides/cra-mileage-log-requirements.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/invoices.html</loc>
+    <loc>https://www.expenseflow.app/ca-en/guides/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/notifications.html</loc>
+    <loc>https://www.expenseflow.app/ca-en/guides/mileage-tracker-for-self-employed-canada.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/receipts.html</loc>
+    <loc>https://www.expenseflow.app/docs/accountant.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/reports.html</loc>
+    <loc>https://www.expenseflow.app/docs/approvals.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/settings.html</loc>
+    <loc>https://www.expenseflow.app/docs/archive.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/docs/trips.html</loc>
+    <loc>https://www.expenseflow.app/docs/expenses.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/en/privacy.html</loc>
+    <loc>https://www.expenseflow.app/docs/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/en/terms.html</loc>
+    <loc>https://www.expenseflow.app/docs/invoices.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/en/security.html</loc>
+    <loc>https://www.expenseflow.app/docs/notifications.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/en/third-party-notices.html</loc>
+    <loc>https://www.expenseflow.app/docs/receipts.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/contact/</loc>
+    <loc>https://www.expenseflow.app/docs/reports.html</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://expenseflow.app/</loc>
+    <loc>https://www.expenseflow.app/docs/settings.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.expenseflow.app/docs/trips.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.expenseflow.app/en/privacy.html</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.expenseflow.app/en/terms.html</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.expenseflow.app/en/security.html</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.expenseflow.app/en/refund.html</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.expenseflow.app/en/third-party-notices.html</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.expenseflow.app/contact/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
 </urlset>

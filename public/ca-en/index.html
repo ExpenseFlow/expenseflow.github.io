@@ -4,19 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="/assets/js/analytics.js"></script>
-  <title>ExpenseFlow · Mileage + Receipts, Auto-Tracked</title>
-  <meta name="description" content="ExpenseFlow auto-tracks every mile by GPS and captures every receipt by camera — turning a day of driving into an audit-ready, CRA-compliant report with zero manual entry." />
+  <title>Mileage Tracker App for Canada (CRA Logbook) | ExpenseFlow</title>
+  <meta name="description" content="Free to start. ExpenseFlow auto-tracks every kilometre by GPS and scans every receipt by camera, producing CRA-compliant logbooks and expense reports with zero manual entry." />
   <link rel="icon" type="image/png" href="../assets/app-icon-512.png" />
-  <link rel="canonical" href="https://expenseflow.app/ca-en/index.html" />
-  <link rel="alternate" hreflang="en" href="https://expenseflow.app/en/index.html" />
-  <link rel="alternate" hreflang="en-us" href="https://expenseflow.app/us-en/index.html" />
-  <link rel="alternate" hreflang="en-ca" href="https://expenseflow.app/ca-en/index.html" />
-  <link rel="alternate" hreflang="x-default" href="https://expenseflow.app/en/index.html" />
+  <link rel="canonical" href="https://www.expenseflow.app/ca-en/" />
+  <link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/" />
+  <link rel="alternate" hreflang="en-us" href="https://www.expenseflow.app/us-en/" />
+  <link rel="alternate" hreflang="en-ca" href="https://www.expenseflow.app/ca-en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.expenseflow.app/en/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://expenseflow.app/ca-en/index.html" />
-  <meta property="og:title" content="ExpenseFlow · Mileage + Receipts, Auto-Tracked" />
-  <meta property="og:description" content="ExpenseFlow auto-tracks every mile by GPS and captures every receipt by camera — turning a day of driving into an audit-ready, CRA-compliant report with zero manual entry." />
+  <meta property="og:url" content="https://www.expenseflow.app/ca-en/" />
+  <meta property="og:title" content="Mileage Tracker App for Canada (CRA Logbook) | ExpenseFlow" />
+  <meta property="og:description" content="Free to start. ExpenseFlow auto-tracks every kilometre by GPS and scans every receipt by camera, producing CRA-compliant logbooks and expense reports with zero manual entry." />
   <meta property="og:site_name" content="ExpenseFlow" />
+  <meta property="og:image" content="https://www.expenseflow.app/assets/dashboard.png" />
+  <meta property="og:image:width" content="1519" />
+  <meta property="og:image:height" content="823" />
+  <meta property="og:image:alt" content="ExpenseFlow dashboard showing distance driven, trips, expense reports and a live trip map" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
   <script type="application/ld+json">
@@ -24,15 +28,16 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ExpenseFlow",
-    "url": "https://expenseflow.app/",
-    "logo": "https://expenseflow.app/assets/logo.png"
+    "url": "https://www.expenseflow.app/",
+    "logo": "https://www.expenseflow.app/assets/logo.png",
+    "sameAs": ["https://apps.apple.com/ca/app/expenseflow/id6752229092", "https://play.google.com/store/apps/details?id=ca.aryabhatta.expenseflow"]
   }
   </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://expenseflow.app/",
+    "url": "https://www.expenseflow.app/",
     "name": "ExpenseFlow"
   }
   </script>
@@ -49,6 +54,62 @@
       "priceCurrency": "CAD"
     }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "We already use spreadsheets or a generic expense app. Why switch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Those treat mileage as a manual afterthought. ExpenseFlow is the only app that auto-tracks miles and captures receipts in one workflow — less time for employees, fewer rejections for finance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about employee privacy and location data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ExpenseFlow uses strong data privacy practices and retains data only as long as required by the CRA. Employees stay in control and can turn tracking off anytime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will it drain employees' batteries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The GPS tracking is built for all-day field work, not a quick errand, and runs efficiently in the background."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can we roll it out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Day one. Download, drive, done — no six-month rollout project. Start with one team free and expand when you're ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it fit our accounting workflow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ExpenseFlow exports clean PDF and CSV reports that drop into most accounting tools, with direct integrations on the roadmap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we start with one team and expand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Start a free trial for one team — no credit card, no rollout. Once you see the payoff, expand to the rest of the organization at your own pace."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -79,9 +140,9 @@
     <section class="hero on-ink">
       <div class="wrap hero__inner">
         <div>
-          <p class="eyebrow">Canada-first · 2026 CRA rates</p>
+          <p class="eyebrow">Mileage tracker &amp; receipt scanner · 2026 CRA rates</p>
           <h1 class="display h-xl">Stop leaving money on the asphalt.</h1>
-          <p class="lede">Every mile auto-logged by GPS. Every receipt captured by camera. ExpenseFlow turns a day of driving into one audit-ready report Finance accepts on the first submission — with zero manual entry.</p>
+          <p class="lede">Every mile auto-logged by GPS. Every receipt captured by camera. ExpenseFlow, the automatic mileage tracker and receipt scanner, turns a day of driving into one audit-ready report Finance accepts on the first submission — with zero manual entry.</p>
           <div class="btn-row hero__cta">
             <a class="tulip-btn tulip-btn--filled btn-lg" href="https://web.expenseflow.app/" data-platform-cta data-cta="hero">Start free</a>
             <a class="tulip-btn tulip-btn--outline btn-lg" href="calculator.html">See what the CRA owes you</a>
@@ -530,6 +591,7 @@
           <a href="pricing.html">Pricing</a>
           <a href="for-business.html">For business</a>
           <a href="accountants.html">For accountants</a>
+          <a href="guides/">Guides</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
