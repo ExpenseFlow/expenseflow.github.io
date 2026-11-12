@@ -133,11 +133,90 @@
       // non-fatal: store links keep their static hrefs
     }
 
+    var platform = detectPlatform();
+
     try {
-      routePlatformCtas(detectPlatform(), utm);
+      routePlatformCtas(platform, utm);
     } catch (e) {
       // non-fatal: CTAs keep their web-app hrefs
     }
+
+    try {
+      showAppBanner(platform, utm);
+    } catch (e) {
+      // non-fatal: banner is a nicety
+    }
+  }
+
+  // ---------------------------------------------------------------------
+  // "Get the app" banner (mobile only).
+  //
+  // Best-practice notes:
+  //  - iOS Safari already shows Apple's native Smart App Banner (driven by the
+  //    <meta name="apple-itunes-app"> tag in each page), so we skip ours there
+  //    to avoid two banners. We show ours for other iOS browsers/in-app webviews.
+  //  - Android has no native equivalent for arbitrary sites, so we render a
+  //    small, dismissible bar.
+  //  - It sits in normal flow at the top of the page (not a full-screen
+  //    interstitial and not fixed), which keeps clear of Google's "intrusive
+  //    interstitial" penalty and of the sticky site nav.
+  //  - Desktop never sees it. Dismissal is remembered for 14 days.
+  // ---------------------------------------------------------------------
+  var BANNER_DISMISS_KEY = 'ef_app_banner_dismissed';
+  var BANNER_DISMISS_DAYS = 14;
+
+  function isIosSafari() {
+    var ua = navigator.userAgent || '';
+    return /Safari\//.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA\/|FBAN|FBAV|Instagram|Line\//.test(ua);
+  }
+
+  function bannerDismissed() {
+    try {
+      var ts = parseInt(localStorage.getItem(BANNER_DISMISS_KEY), 10);
+      return !!ts && Date.now() - ts < BANNER_DISMISS_DAYS * 86400000;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function showAppBanner(platform, utm) {
+    if (platform === 'desktop') return;
+    if (platform === 'ios' && isIosSafari()) return; // native Smart App Banner handles it
+    if (bannerDismissed() || document.getElementById('ef-app-banner')) return;
+
+    var href = platform === 'ios' ? buildAppleUrl(APP_STORE_URL, utm) : buildPlayUrl(PLAY_STORE_URL, utm);
+    var store = platform === 'ios' ? 'App Store' : 'Google Play';
+
+    var style = document.createElement('style');
+    style.textContent =
+      '#ef-app-banner{display:flex;align-items:center;gap:12px;padding:10px 12px;background:#1a1a1c;color:#fff;' +
+      'font:500 14px/1.3 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;border-bottom:1px solid rgba(255,255,255,.12)}' +
+      '#ef-app-banner img{width:40px;height:40px;border-radius:9px;flex:none}' +
+      '#ef-app-banner .ef-ab-text{flex:1;min-width:0}' +
+      '#ef-app-banner .ef-ab-text b{display:block;font-weight:600}' +
+      '#ef-app-banner .ef-ab-text span{display:block;color:rgba(255,255,255,.7);font-size:12px}' +
+      '#ef-app-banner a.ef-ab-cta{flex:none;background:#d4a574;color:#1a1a1c;text-decoration:none;font-weight:600;' +
+      'padding:9px 14px;border-radius:999px;min-height:36px;display:inline-flex;align-items:center}' +
+      '#ef-app-banner button{flex:none;background:none;border:0;color:rgba(255,255,255,.7);font-size:22px;line-height:1;' +
+      'width:44px;height:44px;margin:-6px -8px -6px 0;cursor:pointer}';
+    document.head.appendChild(style);
+
+    var bar = document.createElement('div');
+    bar.id = 'ef-app-banner';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', 'Get the ExpenseFlow app');
+    bar.innerHTML =
+      '<img src="/assets/app-icon-512.png" alt="" width="40" height="40">' +
+      '<div class="ef-ab-text"><b>ExpenseFlow</b><span>Auto-track mileage &amp; receipts. Free on ' + store + '.</span></div>' +
+      '<a class="ef-ab-cta" data-cta="app-banner" href="' + href + '">Get the app</a>' +
+      '<button type="button" aria-label="Dismiss app banner">&times;</button>';
+
+    bar.querySelector('button').addEventListener('click', function () {
+      try { localStorage.setItem(BANNER_DISMISS_KEY, String(Date.now())); } catch (e) {}
+      bar.parentNode && bar.parentNode.removeChild(bar);
+    });
+
+    document.body.insertBefore(bar, document.body.firstChild);
   }
 
   if (document.readyState === 'loading') {
