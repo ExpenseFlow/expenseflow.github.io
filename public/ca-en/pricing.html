@@ -18,10 +18,11 @@
   <meta property="og:title" content="Mileage Tracker Pricing: Free, Pro &amp; Business | ExpenseFlow" />
   <meta property="og:description" content="Start free, upgrade to Pro at $7/mo or Business at $10/user/mo. Automatic mileage tracking and receipt capture. Pro pays for itself in one trip." />
   <meta property="og:site_name" content="ExpenseFlow" />
-  <meta property="og:image" content="https://www.expenseflow.app/assets/dashboard.png" />
-  <meta property="og:image:width" content="1519" />
-  <meta property="og:image:height" content="823" />
-  <meta property="og:image:alt" content="ExpenseFlow dashboard showing distance driven, trips, expense reports and a live trip map" />
+  <meta property="og:image" content="https://www.expenseflow.app/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ExpenseFlow App: automatic mileage tracking and receipt capture" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
 </head>
@@ -35,7 +36,17 @@
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="features.html">Features</a>
-        <a href="calculator.html">Calculator</a>
+        <div class="nav-dd">
+          <a class="nav-dd__t" href="resources.html" aria-haspopup="true">Resources<span class="nav-dd__car" aria-hidden="true"></span></a>
+          <div class="nav-dd__menu"><div class="nav-dd__panel">
+            <a href="calculator.html">Mileage calculator</a>
+            <a href="mileage-rates.html">2026 CRA per-km rates</a>
+            <a href="mileage-log-template.html">Mileage logbook template</a>
+            <a href="guides/">Guides</a>
+            <hr />
+            <a href="resources.html">All resources</a>
+          </div></div>
+        </div>
         <a href="pricing.html">Pricing</a>
         <a href="for-business.html">For business</a>
         <a href="accountants.html">For accountants</a>
@@ -262,7 +273,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid--5">
         <div class="footer-brand">
           <a class="brand" href="index.html"><img src="../assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
           <p>Auto-tracked mileage and receipts, turned into CRA-compliant vehicle use records. Built in Canada for audit-ready reporting.</p>
@@ -270,11 +281,17 @@
         <div class="footer-col">
           <h4>Product</h4>
           <a href="features.html">Features</a>
-          <a href="calculator.html">Calculator</a>
           <a href="pricing.html">Pricing</a>
           <a href="for-business.html">For business</a>
           <a href="accountants.html">For accountants</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="calculator.html">Calculator</a>
+          <a href="mileage-rates.html">Mileage rates</a>
+          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="guides/">Guides</a>
+          <a href="resources.html">All resources</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -308,8 +325,8 @@
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-links a').forEach(function (a) {
-        if (a.getAttribute('href') === file) a.classList.add('active');
+      document.querySelectorAll('.nav-links > a, .nav-links .nav-dd__t').forEach(function (a) {
+        if (a.getAttribute('href') === file || (a.getAttribute('href') === 'resources.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
       });
     })();
 

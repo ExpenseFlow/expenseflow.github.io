@@ -18,10 +18,11 @@
   <meta property="og:title" content="Mileage Tracker App for Canada (CRA Logbook) | ExpenseFlow" />
   <meta property="og:description" content="Free to start. ExpenseFlow auto-tracks every kilometre by GPS and scans every receipt by camera, producing CRA-compliant logbooks and expense reports with zero manual entry." />
   <meta property="og:site_name" content="ExpenseFlow" />
-  <meta property="og:image" content="https://www.expenseflow.app/assets/dashboard.png" />
-  <meta property="og:image:width" content="1519" />
-  <meta property="og:image:height" content="823" />
-  <meta property="og:image:alt" content="ExpenseFlow dashboard showing distance driven, trips, expense reports and a live trip map" />
+  <meta property="og:image" content="https://www.expenseflow.app/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ExpenseFlow App: automatic mileage tracking and receipt capture" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
   <script type="application/ld+json">
@@ -123,7 +124,17 @@
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="features.html">Features</a>
-        <a href="calculator.html">Calculator</a>
+        <div class="nav-dd">
+          <a class="nav-dd__t" href="resources.html" aria-haspopup="true">Resources<span class="nav-dd__car" aria-hidden="true"></span></a>
+          <div class="nav-dd__menu"><div class="nav-dd__panel">
+            <a href="calculator.html">Mileage calculator</a>
+            <a href="mileage-rates.html">2026 CRA per-km rates</a>
+            <a href="mileage-log-template.html">Mileage logbook template</a>
+            <a href="guides/">Guides</a>
+            <hr />
+            <a href="resources.html">All resources</a>
+          </div></div>
+        </div>
         <a href="pricing.html">Pricing</a>
         <a href="for-business.html">For business</a>
         <a href="accountants.html">For accountants</a>
@@ -377,8 +388,8 @@
         <div class="split reveal">
           <div>
             <p class="eyebrow">Calculator</p>
-            <h2 class="display h-lg">How much can you claim this year?</h2>
-            <p class="lede">Most drivers underestimate how much they can claim. Move the slider and see your deduction — then track it so you don't leave any of it behind.</p>
+            <h2 class="display h-lg">What is your driving worth?</h2>
+            <p class="lede">Move the slider to see what your driving is worth at the 2026 rates. Then keep the records that back it up.</p>
             <div class="btn-row" style="margin-top:32px;">
               <a class="tulip-btn tulip-btn--gold btn-lg" href="calculator.html">Calculate my deduction</a>
             </div>
@@ -392,9 +403,9 @@
                 </div>
               </div>
               <div class="calc__result">
-                <div class="rlab">Your annual CRA-deductible mileage is worth</div>
-                <div class="ramt" id="teaserAmt">$11,388</div>
-                <div class="rsub">at the 2026 CRA rate. Track it compliantly and claim it all.</div>
+                <div class="rlab">At 2026 CRA rates, an employer can reimburse up to</div>
+                <div class="ramt" id="teaserAmt">$10,752</div>
+                <div class="rsub">a year, tax-free, for this much driving. Self-employed? <a href="calculator.html" style="color:var(--gold);text-decoration:underline;">See what you could save</a>.</div>
               </div>
             </div>
           </div>
@@ -563,6 +574,32 @@
       </div>
     </section>
 
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="section-head left">
+          <p class="eyebrow">Resources</p>
+          <h2 class="display h-lg">Handy at tax time</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feat-card">
+            <span class="ico"><span class="material-symbols-outlined">calculate</span></span>
+            <h3><a href="calculator.html" style="color:inherit;text-decoration:none;">Mileage deduction calculator</a></h3>
+            <p>Estimate your annual claim at the 2026 CRA rate.</p>
+          </div>
+          <div class="feat-card">
+            <span class="ico"><span class="material-symbols-outlined">percent</span></span>
+            <h3><a href="mileage-rates.html" style="color:inherit;text-decoration:none;">2026 CRA per-km rates</a></h3>
+            <p>CRA rates with the 5,000 km tiers, plus a reimbursement calculator.</p>
+          </div>
+          <div class="feat-card">
+            <span class="ico"><span class="material-symbols-outlined">table_chart</span></span>
+            <h3><a href="mileage-log-template.html" style="color:inherit;text-decoration:none;">Free mileage logbook template</a></h3>
+            <p>Excel, Google Sheets or printable, with the fields the CRA expects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== FINAL CTA ===================== -->
     <section class="section section--ink cta-band">
       <div class="wrap wrap--narrow">
@@ -580,7 +617,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid--5">
         <div class="footer-brand">
           <a class="brand" href="index.html"><img src="../assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
           <p>Auto-tracked mileage and receipts, turned into CRA-compliant vehicle use records. Built in Canada for audit-ready reporting.</p>
@@ -588,11 +625,17 @@
         <div class="footer-col">
           <h4>Product</h4>
           <a href="features.html">Features</a>
-          <a href="calculator.html">Calculator</a>
           <a href="pricing.html">Pricing</a>
           <a href="for-business.html">For business</a>
           <a href="accountants.html">For accountants</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="calculator.html">Calculator</a>
+          <a href="mileage-rates.html">Mileage rates</a>
+          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="guides/">Guides</a>
+          <a href="resources.html">All resources</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -623,11 +666,12 @@
     </div>
   </footer>
 
+  <script src="/assets/js/rates.js"></script>
   <script>
     // Active nav link
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-links a').forEach(function (a) {
+      document.querySelectorAll('.nav-links > a, .nav-links .nav-dd__t').forEach(function (a) {
         var href = a.getAttribute('href');
         if (href === file) a.classList.add('active');
       });
@@ -658,7 +702,8 @@
       function update() {
         var weekly = +range.value;
         km.textContent = weekly;
-        amt.textContent = fmt(weekly * 52 * 0.73);
+        var C = window.EF_RATES.CA, d = weekly * 52;
+        amt.textContent = fmt(Math.min(d, C.tierKm) * C.provinces[0] + Math.max(d - C.tierKm, 0) * C.provinces[1]);
       }
       range.addEventListener('input', update);
       update();
