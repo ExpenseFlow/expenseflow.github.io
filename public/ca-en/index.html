@@ -378,8 +378,8 @@
         <div class="split reveal">
           <div>
             <p class="eyebrow">Calculator</p>
-            <h2 class="display h-lg">How much can you claim this year?</h2>
-            <p class="lede">Most drivers underestimate how much they can claim. Move the slider and see your deduction — then track it so you don't leave any of it behind.</p>
+            <h2 class="display h-lg">What is your driving worth?</h2>
+            <p class="lede">Move the slider to see what your driving is worth at the 2026 rates. Then keep the records that back it up.</p>
             <div class="btn-row" style="margin-top:32px;">
               <a class="tulip-btn tulip-btn--gold btn-lg" href="calculator.html">Calculate my deduction</a>
             </div>
@@ -393,9 +393,9 @@
                 </div>
               </div>
               <div class="calc__result">
-                <div class="rlab">Your annual CRA-deductible mileage is worth</div>
-                <div class="ramt" id="teaserAmt">$11,388</div>
-                <div class="rsub">at the 2026 CRA rate. Track it compliantly and claim it all.</div>
+                <div class="rlab">At 2026 CRA rates, an employer can reimburse up to</div>
+                <div class="ramt" id="teaserAmt">$10,752</div>
+                <div class="rsub">a year, tax-free, for this much driving. Self-employed? <a href="calculator.html" style="color:var(--gold);text-decoration:underline;">See what you could save</a>.</div>
               </div>
             </div>
           </div>
@@ -652,6 +652,7 @@
     </div>
   </footer>
 
+  <script src="/assets/js/rates.js"></script>
   <script>
     // Active nav link
     (function () {
@@ -687,7 +688,8 @@
       function update() {
         var weekly = +range.value;
         km.textContent = weekly;
-        amt.textContent = fmt(weekly * 52 * 0.73);
+        var C = window.EF_RATES.CA, d = weekly * 52;
+        amt.textContent = fmt(Math.min(d, C.tierKm) * C.provinces[0] + Math.max(d - C.tierKm, 0) * C.provinces[1]);
       }
       range.addEventListener('input', update);
       update();

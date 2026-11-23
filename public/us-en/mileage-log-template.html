@@ -21,32 +21,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
-  <style>
-    .lg-hero{padding-block:clamp(40px,5vw,72px);}
-    .lg-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
-    .lg-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;max-width:900px;}
-    .lg-fields div{border:1px solid var(--color-border);border-radius:10px;padding:16px 18px;}
-    .lg-fields b{display:block;margin-bottom:4px;}
-    .lg-fields span{font-size:14px;color:var(--color-muted-foreground);line-height:1.5;}
-    .lg-cmp{max-width:760px;color:var(--color-muted-foreground);font-size:16px;line-height:1.7;}
-    .lg-cmp li{margin-bottom:8px;}
-    .lg-next{max-width:760px;border:1px solid var(--color-border);border-radius:12px;padding:22px 24px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-    .lg-next p{margin:0;max-width:46ch;color:var(--color-muted-foreground);font-size:15px;line-height:1.55;}
-    .lg-sheet{display:none;}
-    .lg-sheet table{width:100%;border-collapse:collapse;font-size:12px;}
-    .lg-sheet th,.lg-sheet td{border:1px solid #999;padding:6px;text-align:left;}
-    .lg-sheet td{height:26px;}
-    .lg-sheet h2{font-size:18px;margin:0 0 4px;}
-    .lg-sheet p{font-size:11px;margin:0 0 10px;color:#444;}
-    @media print{
-      body>*:not(.lg-sheet){display:none !important;}
-      .lg-sheet{display:block;}
-      @page{size:landscape;margin:12mm;}
-    }
-  </style>
+  <link rel="stylesheet" href="../css/tools.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the IRS require in a mileage log?", "acceptedAnswer": {"@type": "Answer", "text": "Adequate records: the date, distance, destination and business purpose of each trip, made at or near the time of the trip. Also keep your total miles for the year if you also use the vehicle personally."}}, {"@type": "Question", "name": "Can I use this in Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Open Google Sheets, choose File, then Import, then Upload, and select the downloaded file. Formulas work the same way."}}, {"@type": "Question", "name": "Which rates does it use?", "acceptedAnswer": {"@type": "Answer", "text": "The 2026 IRS standard mileage rates: 72.5 cents for January to June and 76 cents for July to December. Both are editable on the Summary tab."}}, {"@type": "Question", "name": "Is this tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a record-keeping tool. Confirm what you can deduct with your accountant."}}]}</script>
 </head>
-<body>
+<body class="lg-page">
   <header class="site-nav">
     <div class="wrap site-nav__inner">
       <a class="brand" href="index.html">

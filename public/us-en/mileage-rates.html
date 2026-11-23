@@ -21,28 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
-  <style>
-    .rt-hero{padding-block:clamp(40px,5vw,72px);}
-    .rt-big{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0 0;}
-    .rt-card{background:var(--ink-2);border:1px solid var(--ink-line);border-radius:12px;padding:22px 24px;}
-    .rt-card .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-ink-dim);font-weight:600;}
-    .rt-card .v{font-family:var(--font-display);font-weight:800;font-size:40px;letter-spacing:-.02em;color:var(--on-ink);margin-top:6px;}
-    .rt-card .v small{font-size:15px;color:var(--on-ink-dim);font-weight:500;}
-    .rt-calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;max-width:760px;}
-    .rt-calc label{display:block;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-muted-foreground);margin-bottom:8px;}
-    .rt-calc input,.rt-calc select{width:100%;padding:14px 16px;font-size:20px;border:1px solid var(--color-border);border-radius:10px;background:#fff;font-family:inherit;}
-    .rt-out{grid-column:1/-1;background:var(--color-muted,#f4f3ee);border-radius:12px;padding:22px 24px;}
-    .rt-out .amt{font-family:var(--font-display);font-weight:800;font-size:44px;letter-spacing:-.02em;}
-    .rt-out .sub{color:var(--color-muted-foreground);font-size:14.5px;margin-top:4px;line-height:1.55;}
-    .rt-table{width:100%;max-width:760px;border-collapse:collapse;font-size:16px;}
-    .rt-table th,.rt-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--color-border);}
-    .rt-table th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted-foreground);}
-    .rt-table tr.cur td{font-weight:700;}
-    .rt-note{font-size:13.5px;color:var(--color-muted-foreground);margin-top:14px;max-width:760px;line-height:1.6;}
-    .rt-next{max-width:760px;border:1px solid var(--color-border);border-radius:12px;padding:22px 24px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-    .rt-next p{margin:0;max-width:46ch;color:var(--color-muted-foreground);font-size:15px;line-height:1.55;}
-    @media(max-width:560px){.rt-calc{grid-template-columns:1fr;}}
-  </style>
+  <link rel="stylesheet" href="../css/tools.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which IRS mileage rate do I use in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Use 72.5 cents per mile for business driving from January 1 to June 30, 2026, and 76 cents per mile from July 1 to December 31, 2026. The rate depends on the date of each trip."}}, {"@type": "Question", "name": "Can I deduct my commute?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no. Driving between your home and a regular workplace is commuting. Trips from your workplace or home office to clients, job sites or other business stops can qualify. Ask your tax professional about your situation."}}, {"@type": "Question", "name": "Can employees deduct mileage?", "acceptedAnswer": {"@type": "Answer", "text": "Under current federal rules, W-2 employees generally cannot deduct unreimbursed mileage. Self-employed people (Schedule C) can use the standard mileage rate. Employers can reimburse at or below the IRS rate under an accountable plan."}}, {"@type": "Question", "name": "Do I need a mileage log?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The IRS requires adequate records, such as the date, distance, destination and business purpose of each trip, kept at or near the time of the trip. A year-end estimate is not enough."}}, {"@type": "Question", "name": "Standard mileage or actual expenses?", "acceptedAnswer": {"@type": "Answer", "text": "The standard rate is simpler: miles × rate. Actual expenses (fuel, insurance, repairs, depreciation) times your business-use percentage can be higher for expensive or low-mileage vehicles. Rules limit switching methods, so check before your first year of use."}}]}</script>
 </head>
 <body>
@@ -94,9 +73,9 @@
           <div>
             <label for="period">When did you drive?</label>
             <select id="period">
-              <option value="0.725">Jan 1 – Jun 30, 2026 (72.5¢)</option>
-              <option value="0.76" selected>Jul 1 – Dec 31, 2026 (76¢)</option>
-              <option value="0.725|0.76">Full year (both rates)</option>
+              <option value="h1">Jan 1 – Jun 30, 2026 (72.5¢)</option>
+              <option value="h2" selected>Jul 1 – Dec 31, 2026 (76¢)</option>
+              <option value="both">Full year (both rates)</option>
             </select>
           </div>
           <div class="rt-out">
@@ -220,6 +199,7 @@
     </div>
   </footer>
 
+  <script src="/assets/js/rates.js"></script>
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
@@ -236,14 +216,14 @@
       function update() {
         var d = Math.max(0, parseFloat(dist.value) || 0);
         var v = period.value;
-        var total, note;
-        if (v.indexOf('|') > -1) {
-          var r = v.split('|').map(Number);
-          total = d * ((r[0] + r[1]) / 2);
+        var R = window.EF_RATES.US, total, note;
+        if (v === 'both') {
+          total = d * ((R.h1 + R.h2) / 2);
           note = 'Average of the two 2026 rates, assuming half your miles in each period.';
         } else {
-          total = d * parseFloat(v);
-          note = d.toLocaleString('en-US') + ' miles × $' + parseFloat(v).toFixed(3);
+          var rate = v === 'h1' ? R.h1 : R.h2;
+          total = d * rate;
+          note = d.toLocaleString('en-US') + ' miles × $' + rate.toFixed(3);
         }
         amt.textContent = money(total);
         sub.textContent = note;

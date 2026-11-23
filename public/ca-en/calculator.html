@@ -6,7 +6,7 @@
   <meta name="apple-itunes-app" content="app-id=6752229092, affiliate-data=pt=128102995&ct=smart-banner" />
   <script src="/assets/js/analytics.js"></script>
   <title>CRA Mileage Deduction Calculator (2026) | ExpenseFlow</title>
-  <meta name="description" content="Free CRA mileage deduction calculator: estimate your annual claim at the 2026 rate of $0.73/km. Most drivers underestimate what they can claim." />
+  <meta name="description" content="Free Canadian mileage calculator: estimate your 2026 vehicle deduction and tax saved from business km, or the per-km allowance an employer can pay. No signup." />
   <link rel="icon" type="image/png" href="../assets/app-icon-512.png" />
   <link rel="canonical" href="https://www.expenseflow.app/ca-en/calculator.html" />
   <link rel="alternate" hreflang="en" href="https://www.expenseflow.app/en/calculator.html" />
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.expenseflow.app/ca-en/calculator.html" />
   <meta property="og:title" content="CRA Mileage Deduction Calculator (2026) | ExpenseFlow" />
-  <meta property="og:description" content="Free CRA mileage deduction calculator: estimate your annual claim at the 2026 rate of $0.73/km. Most drivers underestimate what they can claim." />
+  <meta property="og:description" content="Free Canadian mileage calculator: estimate your 2026 vehicle deduction and tax saved from business km, or the per-km allowance an employer can pay. No signup." />
   <meta property="og:site_name" content="ExpenseFlow" />
   <meta property="og:image" content="https://www.expenseflow.app/assets/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -25,10 +25,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
+  <link rel="stylesheet" href="../css/tools.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can self-employed people claim the CRA per-km rate?", "acceptedAnswer": {"@type": "Answer", "text": "The per-km rate is what an employer can pay an employee tax-free. Self-employed people filing a T2125 generally claim actual vehicle expenses × business-use percentage. That is what the self-employed mode estimates."}}, {"@type": "Question", "name": "What tax rate should I pick?", "acceptedAnswer": {"@type": "Answer", "text": "Use your combined federal and provincial marginal rate, the tax on your next dollar of income. If you are unsure, 25% to 30% is typical for many small businesses."}}, {"@type": "Question", "name": "Why do I need total km as well as business km?", "acceptedAnswer": {"@type": "Answer", "text": "Your deduction depends on the share of driving that is for business. That share comes from business km divided by total km, read from your odometer and your logbook."}}, {"@type": "Question", "name": "Is this tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an estimate to help you plan. Confirm details with your accountant or the CRA."}}]}</script>
 </head>
 <body>
-
-  <!-- ===================== NAV ===================== -->
   <header class="site-nav">
     <div class="wrap site-nav__inner">
       <a class="brand" href="index.html">
@@ -49,104 +49,132 @@
   </header>
 
   <main>
-    <!-- ===================== HERO + CALCULATOR ===================== -->
-    <section class="section--ink" style="padding-block:clamp(48px,6vw,80px);">
+    <section class="section--ink" style="padding-block:clamp(40px,5vw,72px);">
       <div class="wrap">
-        <div class="section-head center" style="margin-bottom:40px;">
-          <p class="eyebrow center-line">Calculator</p>
-          <h1 class="display h-xl" style="color:var(--on-ink);">How much can you claim this year?</h1>
-          <p class="lede" style="color:var(--on-ink-dim);">Most drivers underestimate how much driving they can claim. Estimate your deduction at the 2026 CRA rate of <span class="gold">$0.73/km</span> — then track it in a CRA-compliant format.</p>
-        </div>
-
-        <div class="calc">
-          <div class="calc__controls">
-            <div class="calc-field">
-              <div class="lab"><span class="t">Business km / week</span><span class="v" id="vKm">300</span></div>
-              <input type="range" class="calc-range" id="rKm" min="20" max="1200" step="10" value="300" />
-            </div>
-
-            <div class="calc-field">
-              <div class="lab"><span class="t">Weeks driven / year</span><span class="v" id="vWeeks">48</span></div>
-              <input type="range" class="calc-range" id="rWeeks" min="20" max="52" step="1" value="48" />
-            </div>
-
-            <div class="calc-field">
-              <div class="lab"><span class="t">What do you drive for?</span></div>
-              <div class="seg" id="segRole" role="group" aria-label="Driver type">
-                <button type="button" data-role="agent" aria-pressed="true">Real estate</button>
-                <button type="button" data-role="trades" aria-pressed="false">Trades</button>
-                <button type="button" data-role="gig" aria-pressed="false">Gig / delivery</button>
-                <button type="button" data-role="other" aria-pressed="false">Other</button>
-              </div>
-            </div>
-
-            <div class="calc-field">
-              <div class="lab"><span class="t">How you track today</span></div>
-              <div class="seg" id="segMethod" role="group" aria-label="Current tracking method">
-                <button type="button" data-method="none" aria-pressed="true">Nothing / guess</button>
-                <button type="button" data-method="manual" aria-pressed="false">Spreadsheet</button>
-                <button type="button" data-method="competitor" aria-pressed="false">Cell-tower app</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="calc__result">
-            <div class="rlab">Your CRA-claimable mileage is worth</div>
-            <div class="ramt" id="vTotal">$11,388</div>
-            <div class="rsub" id="vSub">this year, if tracked in a CRA-compliant format.</div>
-
-            <div class="rbreak">
-              <div><span>Annual business distance</span><b id="vDist">15,600 km</b></div>
-              <div><span>At the 2026 CRA rate</span><b>$0.73 / km</b></div>
-              <div><span id="vLossLabel">Lost to cell-tower rounding</span><b class="gold" id="vLoss">$0</b></div>
-            </div>
-
-            <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/" data-platform-cta data-cta="mid">Try it with no obligation</a>
-          </div>
-        </div>
-
-        <p class="center" style="color:var(--on-ink-dim);font-size:13px;margin-top:20px;">Estimate only. Your deduction depends on your business-use percentage and tax situation — talk to your accountant.</p>
-      </div>
-    </section>
-
-    <!-- ===================== WHY YOU'RE LEAVING MONEY ===================== -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head left">
-          <p class="eyebrow">Why the number is bigger than you think</p>
-          <h2 class="display h-lg">Three ways drivers lose the deduction.</h2>
-        </div>
-        <div class="feature-grid">
-          <div class="feat-card">
-            <span class="ico"><span class="material-symbols-outlined">edit_off</span></span>
-            <h3>Forgotten trips</h3>
-            <p>Every drive you don't write down is a deduction you can't claim. Manual logs miss 20–30% of trips. Automatic tracking catches all of them.</p>
-          </div>
-          <div class="feat-card">
-            <span class="ico"><span class="material-symbols-outlined">network_cell</span></span>
-            <h3>Cell-tower rounding</h3>
-            <p>Apps that snap to the nearest tower lose 3–5% of distance on winding roads. ExpenseFlow logs real waypoints to ±1 metre.</p>
-          </div>
-          <div class="feat-card">
-            <span class="ico"><span class="material-symbols-outlined">rule</span></span>
-            <h3>Rejected logs</h3>
-            <p>Rounded numbers, missing trip purpose and no odometer readings get logs thrown out. A clean, time-stamped record survives an audit.</p>
-          </div>
+        <div class="section-head left" style="margin-bottom:0;">
+          <p class="eyebrow">Calculator</p>
+          <h1 class="display h-xl" style="color:var(--on-ink);">Mileage tax savings calculator (Canada)</h1>
+          <p class="lede" style="color:var(--on-ink-dim);">See roughly what your business driving could save you in 2026. Takes about 20 seconds.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===================== CTA ===================== -->
-    <section class="section section--ink cta-band section--tight">
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="ec" id="efCalc" data-country="CA">
+          <div class="ec__in">
+          <div class="ec-field">
+            <label>Who is this for?</label>
+            <div class="ec-seg" role="group" aria-label="Who is this for">
+              <button type="button" data-who="self" aria-pressed="true">Self-employed</button>
+              <button type="button" data-who="emp" aria-pressed="false">Employee paid per km</button>
+            </div>
+          </div>
+          <div class="ec-field">
+            <label>How do you want to enter your driving?</label>
+            <div class="ec-seg" role="group" aria-label="Entry method">
+              <button type="button" data-mode="week" aria-pressed="true">Estimate from my week</button>
+              <button type="button" data-mode="year" aria-pressed="false">I know my yearly total</button>
+            </div>
+          </div>
+          <div id="modeWeek">
+            <div class="ec-row ec-field">
+              <div><label for="trips">Business trips per day</label><input id="trips" type="number" inputmode="decimal" min="0" step="1" value="4" /></div>
+              <div><label for="avg">Average trip (km)</label><input id="avg" type="number" inputmode="decimal" min="0" step="any" value="15" /></div>
+            </div>
+            <div class="ec-row ec-field">
+              <div><label for="days">Days driven per week</label><input id="days" type="number" inputmode="decimal" min="0" max="7" step="1" value="5" /></div>
+              <div><label for="weeks">Weeks driven per year</label><input id="weeks" type="number" inputmode="decimal" min="0" max="52" step="1" value="48" /></div>
+            </div>
+          </div>
+          <div id="modeYear" hidden>
+            <div class="ec-field">
+              <label for="yearly">Business km in the year</label>
+              <input id="yearly" type="number" inputmode="decimal" min="0" step="any" value="14400" />
+            </div>
+          </div>
+          <div id="selfBlock">
+            <div class="ec-row ec-field">
+              <div>
+                <label for="totalKm">Total km driven in the year</label>
+                <input id="totalKm" type="number" inputmode="decimal" min="0" step="any" value="25000" />
+              </div>
+              <div>
+                <label for="costs">Vehicle costs for the year ($)</label>
+                <input id="costs" type="number" inputmode="decimal" min="0" step="any" value="8000" />
+              </div>
+            </div>
+            <p class="ec-hint" style="margin-top:-12px;margin-bottom:22px;">Costs: fuel, insurance, maintenance, licence, lease or loan interest. Self-employed people usually claim actual costs × business-use %, set by your log.</p>
+          </div>
+          <div id="empBlock" hidden>
+            <div class="ec-field">
+              <label for="region">Where do you live?</label>
+              <select id="region"><option value="province" selected>A province</option><option value="territory">Yukon, NWT or Nunavut</option></select>
+            </div>
+          </div>
+          <div class="ec-field" id="rateField">
+            <label for="rate">Your tax rate on extra income</label>
+            <select id="rate"><option value="15">15%</option><option value="20">20%</option><option value="25">25%</option><option value="30" selected>30%</option><option value="35">35%</option><option value="40">40%</option><option value="45">45%</option></select>
+            <p class="ec-hint">Combined federal and provincial tax rate on your next dollar of income. Not sure? 30% is a common middle figure.</p>
+          </div>
+          </div>
+          <div class="ec__out" aria-live="polite">
+            <div class="ec-lab" id="lab">Estimated tax saved</div>
+            <div class="ec-amt" id="saved">$0</div>
+            <p class="ec-sub" id="sub"></p>
+            <div class="ec-break">
+              <div><span>Business distance</span><b id="oDist"></b></div>
+              <div><span id="oLab2"></span><b id="oDed"></b></div>
+            </div>
+            <p class="ec-warn" id="warn" hidden></p>
+            <div class="ec-actions">
+              <button type="button" class="tulip-btn tulip-btn--outline" id="btnPrint" data-cta="calc-print">Print or save</button>
+              <button type="button" class="tulip-btn tulip-btn--outline" id="btnCopy" data-cta="calc-copy">Copy link</button>
+            </div>
+          </div>
+        </div>
+        <p class="ec-note">Estimate only, not tax advice. Rates: CRA 2026 automobile allowance. Confirm what applies to you with your accountant.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight no-print">
+      <div class="wrap">
+        <div class="rt-next">
+          <p><b>An estimate needs records behind it.</b> The CRA expects a trip-by-trip log. Start with our <a href="mileage-log-template.html">free logbook template</a>, or let ExpenseFlow record trips for you.</p>
+          <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/" data-platform-cta data-cta="calc-next">Try ExpenseFlow</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight no-print">
+      <div class="wrap">
+        <div class="section-head left"><h2 class="display h-lg">How this is worked out</h2></div>
+        <ul class="ec-list">
+          <li><b>Self-employed:</b> business-use % = business km ÷ total km. Deduction = vehicle costs × that %. Tax saved = deduction × your tax rate.</li>
+          <li><b>Employee:</b> an employer can pay a reasonable per-km allowance tax-free. For 2026 the CRA rates are 73¢ for the first 5,000 km and 67¢ after (77¢ and 71¢ in the territories).</li>
+          <li>The estimate ignores capital cost allowance, lease and loan interest limits, and CPP. Your accountant applies those.</li>
+        </ul>
+        <div class="section-head left" style="margin-top:40px;"><h2 class="display h-lg">Good to know</h2></div>
+        <ul class="ec-list">
+          <li>Commuting between home and a regular workplace is generally not business travel.</li>
+          <li>Your logbook is what proves the business-use percentage. The CRA expects the date, destination, purpose and km for each trip.</li>
+          <li>If you are an employee and your employer does not reimburse you, ask your accountant about Forms T2200 and T777.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section no-print">
       <div class="wrap wrap--narrow">
-        <h2 class="display h-lg">See it in action.</h2>
-        <p class="lede">Download ExpenseFlow, drive, and see how it works — no obligation. Lock in the money once you're ready.</p>
-        <div class="btn-row" style="justify-content:center;">
-          <a class="tulip-btn tulip-btn--gold btn-lg" href="https://web.expenseflow.app/" data-platform-cta data-cta="closing">Start free</a>
-          <a class="tulip-btn tulip-btn--outline btn-lg" href="pricing.html">See pricing</a>
+        <div class="section-head left"><h2 class="display h-lg">Common questions</h2></div>
+        <div class="faq">
+          <details><summary>Can self-employed people claim the CRA per-km rate?<span class="material-symbols-outlined">add</span></summary><p>The per-km rate is what an employer can pay an employee tax-free. Self-employed people filing a T2125 generally claim actual vehicle expenses × business-use percentage. That is what the self-employed mode estimates.</p></details>
+          <details><summary>What tax rate should I pick?<span class="material-symbols-outlined">add</span></summary><p>Use your combined federal and provincial marginal rate, the tax on your next dollar of income. If you are unsure, 25% to 30% is typical for many small businesses.</p></details>
+          <details><summary>Why do I need total km as well as business km?<span class="material-symbols-outlined">add</span></summary><p>Your deduction depends on the share of driving that is for business. That share comes from business km divided by total km, read from your odometer and your logbook.</p></details>
+          <details><summary>Is this tax advice?<span class="material-symbols-outlined">add</span></summary><p>No. It is an estimate to help you plan. Confirm details with your accountant or the CRA.</p></details>
         </div>
       </div>
     </section>
+
     <section class="section section--tight">
       <div class="wrap">
         <div class="section-head left">
@@ -168,7 +196,6 @@
     </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -216,6 +243,7 @@
     </div>
   </footer>
 
+  <script src="/assets/js/rates.js"></script>
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
@@ -223,67 +251,8 @@
         if (a.getAttribute('href') === file || (a.getAttribute('href') === 'tools.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
       });
     })();
-
-    (function () {
-      var RATE = 0.73;
-      var rKm = document.getElementById('rKm');
-      var rWeeks = document.getElementById('rWeeks');
-      var vKm = document.getElementById('vKm');
-      var vWeeks = document.getElementById('vWeeks');
-      var vTotal = document.getElementById('vTotal');
-      var vDist = document.getElementById('vDist');
-      var vLoss = document.getElementById('vLoss');
-      var vLossLabel = document.getElementById('vLossLabel');
-      var vSub = document.getElementById('vSub');
-      var role = 'agent';
-      var method = 'none';
-
-      // recovery: how much MORE you'd capture vs current method
-      var recovery = { none: 0.25, manual: 0.20, competitor: 0.04 };
-      var lossLabel = {
-        none: 'Recovered vs. guessing',
-        manual: 'Recovered vs. spreadsheet',
-        competitor: 'Lost to cell-tower rounding'
-      };
-
-      function money(n) { return '$' + Math.round(n).toLocaleString('en-CA'); }
-
-      function update() {
-        var weekly = +rKm.value;
-        var weeks = +rWeeks.value;
-        vKm.textContent = weekly;
-        vWeeks.textContent = weeks;
-        var dist = weekly * weeks;
-        vDist.textContent = dist.toLocaleString('en-CA') + ' km';
-        var total = dist * RATE;
-        vTotal.textContent = money(total);
-        var extra = total * recovery[method];
-        vLoss.textContent = '+' + money(extra);
-        vLossLabel.textContent = lossLabel[method];
-        var verb = method === 'competitor' ? 'your current app would quietly round away' : 'most drivers never claim';
-        vSub.textContent = 'in mileage deductions this year — including about ' + money(extra) + ' that ' + verb + '.';
-      }
-
-      rKm.addEventListener('input', update);
-      rWeeks.addEventListener('input', update);
-
-      document.getElementById('segRole').addEventListener('click', function (e) {
-        var b = e.target.closest('button'); if (!b) return;
-        this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
-        b.setAttribute('aria-pressed', 'true'); role = b.dataset.role;
-        // role nudges typical weekly km
-        var presets = { agent: 300, trades: 450, gig: 700, other: 200 };
-        rKm.value = presets[role]; update();
-      });
-      document.getElementById('segMethod').addEventListener('click', function (e) {
-        var b = e.target.closest('button'); if (!b) return;
-        this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
-        b.setAttribute('aria-pressed', 'true'); method = b.dataset.method; update();
-      });
-
-      update();
-    })();
   </script>
+  <script src="/assets/js/calculator.js"></script>
   <script defer src="/assets/js/store-links.js"></script>
 </body>
 </html>

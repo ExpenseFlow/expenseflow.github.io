@@ -378,8 +378,8 @@
         <div class="split reveal">
           <div>
             <p class="eyebrow">Calculator</p>
-            <h2 class="display h-lg">How much can you claim this year?</h2>
-            <p class="lede">Most drivers underestimate how much they can claim. Move the slider and see your deduction — then track it so you don't leave any of it behind.</p>
+            <h2 class="display h-lg">What is your driving worth?</h2>
+            <p class="lede">Move the slider to see what your driving is worth at the 2026 rates. Then keep the records that back it up.</p>
             <div class="btn-row" style="margin-top:32px;">
               <a class="tulip-btn tulip-btn--gold btn-lg" href="calculator.html">Calculate my deduction</a>
             </div>
@@ -393,9 +393,9 @@
                 </div>
               </div>
               <div class="calc__result">
-                <div class="rlab">Your annual IRS-deductible mileage is worth</div>
-                <div class="ramt" id="teaserAmt">$11,856</div>
-                <div class="rsub">at the current 2026 IRS rate. Track it compliantly and claim it all.</div>
+                <div class="rlab">Your annual mileage deduction could be</div>
+                <div class="ramt" id="teaserAmt">$11,583</div>
+                <div class="rsub">at the 2026 IRS rates, before tax. <a href="calculator.html" style="color:var(--gold);text-decoration:underline;">See what it saves you</a>.</div>
               </div>
             </div>
           </div>
@@ -653,6 +653,7 @@
     </div>
   </footer>
 
+  <script src="/assets/js/rates.js"></script>
   <script>
     // Active nav link
     (function () {
@@ -688,7 +689,8 @@
       function update() {
         var weekly = +range.value;
         miles.textContent = weekly;
-        amt.textContent = fmt(weekly * 52 * 0.76);
+        var R = window.EF_RATES.US;
+        amt.textContent = fmt(weekly * 52 * ((R.h1 + R.h2) / 2));
       }
       range.addEventListener('input', update);
       update();

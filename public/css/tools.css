@@ -1,0 +1,78 @@
+/* Shared styles for the free tool pages (calculator, rates, log template, hub). */
+
+/* ---------- Rates pages ---------- */
+.rt-hero{padding-block:clamp(40px,5vw,72px);}
+.rt-big{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0 0;}
+.rt-card{background:var(--ink-2);border:1px solid var(--ink-line);border-radius:12px;padding:22px 24px;}
+.rt-card .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-ink-dim);font-weight:600;}
+.rt-card .v{font-family:var(--font-display);font-weight:800;font-size:40px;letter-spacing:-.02em;color:var(--on-ink);margin-top:6px;}
+.rt-card .v small{font-size:15px;color:var(--on-ink-dim);font-weight:500;}
+.rt-calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;max-width:760px;}
+.rt-calc label{display:block;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-muted-foreground);margin-bottom:8px;}
+.rt-calc input,.rt-calc select{width:100%;padding:14px 16px;font-size:20px;border:1px solid var(--color-border);border-radius:10px;background:#fff;font-family:inherit;}
+.rt-out{grid-column:1/-1;background:var(--color-muted,#f4f3ee);border-radius:12px;padding:22px 24px;}
+.rt-out .amt{font-family:var(--font-display);font-weight:800;font-size:44px;letter-spacing:-.02em;}
+.rt-out .sub{color:var(--color-muted-foreground);font-size:14.5px;margin-top:4px;line-height:1.55;}
+.rt-table{width:100%;max-width:760px;border-collapse:collapse;font-size:16px;}
+.rt-table th,.rt-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--color-border);}
+.rt-table th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted-foreground);}
+.rt-table tr.cur td{font-weight:700;}
+.rt-note{font-size:13.5px;color:var(--color-muted-foreground);margin-top:14px;max-width:760px;line-height:1.6;}
+.rt-next{max-width:760px;border:1px solid var(--color-border);border-radius:12px;padding:22px 24px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.rt-next a:not(.tulip-btn){color:var(--color-foreground);text-decoration:underline;}
+.rt-next p{margin:0;max-width:46ch;color:var(--color-muted-foreground);font-size:15px;line-height:1.55;}
+@media(max-width:560px){.rt-calc{grid-template-columns:1fr;}}
+
+/* ---------- Log template pages ---------- */
+.lg-hero{padding-block:clamp(40px,5vw,72px);}
+.lg-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+.lg-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;max-width:900px;}
+.lg-fields div{border:1px solid var(--color-border);border-radius:10px;padding:16px 18px;}
+.lg-fields b{display:block;margin-bottom:4px;}
+.lg-fields span{font-size:14px;color:var(--color-muted-foreground);line-height:1.5;}
+.lg-cmp{max-width:760px;color:var(--color-muted-foreground);font-size:16px;line-height:1.7;}
+.lg-cmp li{margin-bottom:8px;}
+.lg-next{max-width:760px;border:1px solid var(--color-border);border-radius:12px;padding:22px 24px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.lg-next p{margin:0;max-width:46ch;color:var(--color-muted-foreground);font-size:15px;line-height:1.55;}
+.lg-sheet{display:none;}
+.lg-sheet table{width:100%;border-collapse:collapse;font-size:12px;}
+.lg-sheet th,.lg-sheet td{border:1px solid #999;padding:6px;text-align:left;}
+.lg-sheet td{height:26px;}
+.lg-sheet h2{font-size:18px;margin:0 0 4px;}
+.lg-sheet p{font-size:11px;margin:0 0 10px;color:#444;}
+@media print{
+  body.lg-page>*:not(.lg-sheet){display:none !important;}
+  body.lg-page .lg-sheet{display:block;}
+  @page{size:landscape;margin:12mm;}
+}
+
+/* ---------- Calculator ---------- */
+.ec{display:grid;grid-template-columns:1.15fr 1fr;border:1px solid var(--color-border);border-radius:16px;overflow:hidden;max-width:1000px;}
+.ec__in{padding:clamp(22px,3vw,34px);background:#fff;}
+.ec__out{padding:clamp(22px,3vw,34px);background:var(--color-muted,#f4f3ee);display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--color-border);}
+.ec-field{margin-bottom:22px;}
+.ec__in>.ec-field:last-child{margin-bottom:0;}
+.ec-field label,.ec-lbl{display:block;font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--color-muted-foreground);margin-bottom:8px;}
+.ec-field input,.ec-field select{width:100%;padding:12px 14px;font-size:18px;border:1px solid var(--color-border);border-radius:10px;background:#fff;font-family:inherit;}
+.ec-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.ec-hint{font-size:13px;color:var(--color-muted-foreground);margin:8px 0 0;line-height:1.5;}
+.ec-seg{display:flex;gap:8px;flex-wrap:wrap;}
+.ec-seg button{padding:10px 14px;border:1px solid var(--color-border);border-radius:999px;background:#fff;font:inherit;font-size:14.5px;cursor:pointer;color:var(--color-foreground);}
+.ec-seg button[aria-pressed="true"]{background:var(--ink,#34322c);color:#fff;border-color:var(--ink,#34322c);}
+.ec-lab{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted-foreground);margin-bottom:10px;}
+.ec-amt{font-family:var(--font-display);font-weight:800;font-size:clamp(46px,7vw,68px);letter-spacing:-.03em;line-height:1;}
+.ec-sub{margin-top:14px;font-size:15px;line-height:1.6;color:var(--color-muted-foreground);}
+.ec-break{margin-top:20px;padding-top:16px;border-top:1px solid var(--color-border);display:grid;gap:8px;}
+.ec-break div{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;color:var(--color-muted-foreground);}
+.ec-break b{color:var(--color-foreground);font-weight:600;text-align:right;}
+.ec-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
+.ec-warn{margin:12px 0 0;font-size:13.5px;color:#9a3412;}
+.ec-note{max-width:1000px;font-size:13.5px;color:var(--color-muted-foreground);margin-top:14px;line-height:1.6;}
+.ec-list{max-width:760px;color:var(--color-muted-foreground);font-size:16px;line-height:1.7;padding-left:20px;}
+.ec-list li{margin-bottom:8px;}
+.ec [hidden]{display:none !important;}
+@media(max-width:820px){.ec{grid-template-columns:1fr;}.ec__out{border-left:none;border-top:1px solid var(--color-border);}}
+@media print{
+  .site-nav,.site-footer,.no-print,.ec-actions{display:none !important;}
+  .ec{border:none;}
+}

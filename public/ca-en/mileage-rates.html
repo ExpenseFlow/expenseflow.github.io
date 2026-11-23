@@ -21,28 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
-  <style>
-    .rt-hero{padding-block:clamp(40px,5vw,72px);}
-    .rt-big{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0 0;}
-    .rt-card{background:var(--ink-2);border:1px solid var(--ink-line);border-radius:12px;padding:22px 24px;}
-    .rt-card .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-ink-dim);font-weight:600;}
-    .rt-card .v{font-family:var(--font-display);font-weight:800;font-size:40px;letter-spacing:-.02em;color:var(--on-ink);margin-top:6px;}
-    .rt-card .v small{font-size:15px;color:var(--on-ink-dim);font-weight:500;}
-    .rt-calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;max-width:760px;}
-    .rt-calc label{display:block;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-muted-foreground);margin-bottom:8px;}
-    .rt-calc input,.rt-calc select{width:100%;padding:14px 16px;font-size:20px;border:1px solid var(--color-border);border-radius:10px;background:#fff;font-family:inherit;}
-    .rt-out{grid-column:1/-1;background:var(--color-muted,#f4f3ee);border-radius:12px;padding:22px 24px;}
-    .rt-out .amt{font-family:var(--font-display);font-weight:800;font-size:44px;letter-spacing:-.02em;}
-    .rt-out .sub{color:var(--color-muted-foreground);font-size:14.5px;margin-top:4px;line-height:1.55;}
-    .rt-table{width:100%;max-width:760px;border-collapse:collapse;font-size:16px;}
-    .rt-table th,.rt-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--color-border);}
-    .rt-table th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted-foreground);}
-    .rt-table tr.cur td{font-weight:700;}
-    .rt-note{font-size:13.5px;color:var(--color-muted-foreground);margin-top:14px;max-width:760px;line-height:1.6;}
-    .rt-next{max-width:760px;border:1px solid var(--color-border);border-radius:12px;padding:22px 24px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-    .rt-next p{margin:0;max-width:46ch;color:var(--color-muted-foreground);font-size:15px;line-height:1.55;}
-    @media(max-width:560px){.rt-calc{grid-template-columns:1fr;}}
-  </style>
+  <link rel="stylesheet" href="../css/tools.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the CRA per-km rate for 2026?", "acceptedAnswer": {"@type": "Answer", "text": "For 2026 the prescribed rate is 73 cents per km for the first 5,000 km driven in the year and 67 cents per km after that in the provinces. In Yukon, the Northwest Territories and Nunavut it is 77 and 71 cents."}}, {"@type": "Question", "name": "Can self-employed people use the per-km rate?", "acceptedAnswer": {"@type": "Answer", "text": "The CRA per-km rate is the amount an employer can pay an employee tax-free as a reasonable allowance. Self-employed people filing a T2125 generally claim actual motor vehicle expenses × business-use percentage, though many use the per-km rate as a rough benchmark. Check with your accountant."}}, {"@type": "Question", "name": "Is a flat monthly car allowance taxable?", "acceptedAnswer": {"@type": "Answer", "text": "Generally yes. An allowance that is not based on the kilometres driven is a taxable benefit, and it cannot be averaged out at year end to look like a per-km rate."}}, {"@type": "Question", "name": "What does the CRA want in a logbook?", "acceptedAnswer": {"@type": "Answer", "text": "For each business trip: the date, destination, purpose and kilometres driven, plus the total kilometres driven in the year. A full 12-month logbook can set your business-use percentage for later years under the simplified method."}}, {"@type": "Question", "name": "Can I deduct my commute?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no. Travel between home and a regular place of work is personal. Trips from your workplace or home office to clients and job sites can qualify."}}]}</script>
 </head>
 <body>
@@ -94,8 +73,8 @@
           <div>
             <label for="period">Where do you live?</label>
             <select id="period">
-              <option value="0.73|0.67" selected>Province (73¢ / 67¢)</option>
-              <option value="0.77|0.71">Yukon, NWT or Nunavut (77¢ / 71¢)</option>
+              <option value="prov" selected>Province (73¢ / 67¢)</option>
+              <option value="terr">Yukon, NWT or Nunavut (77¢ / 71¢)</option>
             </select>
           </div>
           <div class="rt-out">
@@ -216,6 +195,7 @@
     </div>
   </footer>
 
+  <script src="/assets/js/rates.js"></script>
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
@@ -231,9 +211,10 @@
       function money(n) { return '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
       function update() {
         var d = Math.max(0, parseFloat(dist.value) || 0);
-        var r = period.value.split('|').map(Number);
-        var first = Math.min(d, 5000);
-        var rest = Math.max(0, d - 5000);
+        var C = window.EF_RATES.CA;
+        var r = period.value === 'terr' ? C.territories : C.provinces;
+        var first = Math.min(d, C.tierKm);
+        var rest = Math.max(0, d - C.tierKm);
         amt.textContent = money(first * r[0] + rest * r[1]);
         sub.textContent = first.toLocaleString('en-CA') + ' km × $' + r[0].toFixed(2) + (rest ? ' + ' + rest.toLocaleString('en-CA') + ' km × $' + r[1].toFixed(2) : '');
       }
