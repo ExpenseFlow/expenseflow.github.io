@@ -10,10 +10,11 @@
 
   var country = root.getAttribute('data-country');
   var isCA = country === 'CA';
-  var locale = isCA ? 'en-CA' : 'en-US';
+  var isEN = country === 'EN';
+  var locale = isCA ? 'en-CA' : isEN ? undefined : 'en-US';
   var unit = isCA ? 'km' : 'miles';
-  var state = { mode: 'week', who: 'self' };
-  var FIELDS = ['trips', 'avg', 'days', 'weeks', 'yearly', 'period', 'totalKm', 'costs', 'rate', 'region'];
+  var state = { mode: 'week', who: isEN ? 'emp' : 'self' };
+  var FIELDS = ['trips', 'avg', 'days', 'weeks', 'yearly', 'period', 'totalKm', 'costs', 'rate', 'region', 'unit', 'rateUnit'];
   var touched = false;
 
   function $(id) { return document.getElementById(id); }
@@ -23,7 +24,7 @@
     if (!isFinite(v) || v < 0) return 0;
     return max && v > max ? max : v;
   }
-  function money(n) { return '$' + Math.round(n).toLocaleString(locale); }
+  function money(n) { return (isEN ? '' : '$') + Math.round(n).toLocaleString(locale); }
   function dist(n) { return Math.round(n).toLocaleString(locale) + ' ' + unit; }
   function show(id, on) { var el = $(id); if (el) el.hidden = !on; }
   function text(id, t) { var el = $(id); if (el) el.textContent = t; }
@@ -44,13 +45,14 @@
     });
     if (p.get('m') === 'year') state.mode = 'year';
     if (isCA && p.get('who') === 'emp') state.who = 'emp';
+    if (isEN && p.get('who') === 'self') state.who = 'self';
   }
 
   function writeUrl() {
     try {
       var p = new URLSearchParams();
       p.set('m', state.mode);
-      if (isCA) p.set('who', state.who);
+      if (isCA || isEN) p.set('who', state.who);
       FIELDS.forEach(function (id) { var el = $(id); if (el && el.value !== '') p.set(id, el.value); });
       history.replaceState(null, '', location.pathname + '?' + p.toString());
     } catch (e) { /* ignore */ }
@@ -64,11 +66,19 @@
   function update() {
     var annual = annualDistance();
     var tax = num('rate') / 100;
-    var emp = isCA && state.who === 'emp';
+    var emp = (isCA || isEN) && state.who === 'emp';
     var warn = '';
+    if (isEN) unit = $('unit') && $('unit').value === 'miles' ? 'miles' : 'km';
 
     setSeg('mode', state.mode);
-    if (isCA) setSeg('who', state.who);
+    if (isCA || isEN) setSeg('who', state.who);
+    if (isEN) {
+      var ul = root.querySelectorAll('.unit-lbl');
+      for (var k = 0; k < ul.length; k++) ul[k].textContent = unit;
+      var us = root.querySelectorAll('.unit-sing');
+      for (var q = 0; q < us.length; q++) us[q].textContent = unit === 'miles' ? 'mile' : 'km';
+      show('rateField', !emp);
+    }
     show('modeWeek', state.mode === 'week');
     show('modeYear', state.mode === 'year');
     if (isCA) {
@@ -79,7 +89,20 @@
 
     var saved = 0, label = 'Estimated tax saved', sub = '', ded = 0, extraLabel = '', extraVal = '';
 
-    if (isCA) {
+    if (isEN) {
+      var rateU = num('rateUnit');
+      ded = annual * rateU;
+      if (emp) {
+        label = 'Estimated reimbursement';
+        saved = ded;
+        sub = dist(annual) + ' × ' + rateU + ' per ' + (unit === 'miles' ? 'mile' : 'km') + '. Amounts are in your own currency.';
+      } else {
+        saved = ded * tax;
+        sub = 'Your deduction is ' + money(ded) + ' (' + dist(annual) + ' × ' + rateU + '). Your tax saving is that amount × ' + Math.round(tax * 100) + '%. Amounts are in your own currency.';
+      }
+      extraLabel = 'Rate used';
+      extraVal = rateU + ' per ' + (unit === 'miles' ? 'mile' : 'km');
+    } else if (isCA) {
       if (emp) {
         var t = $('region') && $('region').value === 'territory' ? R.CA.territories : R.CA.provinces;
         var allowance = Math.min(annual, R.CA.tierKm) * t[0] + Math.max(annual - R.CA.tierKm, 0) * t[1];
