@@ -53,7 +53,17 @@
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="/us-en/features.html">Features</a>
-        <a href="/us-en/tools.html">Free tools</a>
+        <div class="nav-dd">
+          <a class="nav-dd__t" href="/us-en/resources.html" aria-haspopup="true">Resources<span class="nav-dd__car" aria-hidden="true"></span></a>
+          <div class="nav-dd__menu"><div class="nav-dd__panel">
+            <a href="/us-en/calculator.html">Mileage calculator</a>
+            <a href="/us-en/mileage-rates.html">2026 IRS mileage rates</a>
+            <a href="/us-en/mileage-log-template.html">Mileage log template</a>
+            <a href="/us-en/guides/">Guides</a>
+            <hr />
+            <a href="/us-en/resources.html">All resources</a>
+          </div></div>
+        </div>
         <a href="/us-en/pricing.html">Pricing</a>
         <a href="/us-en/for-business.html">For business</a>
         <a href="/us-en/accountants.html">For accountants</a>
@@ -89,7 +99,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid--5">
         <div class="footer-brand">
           <a class="brand" href="/us-en/"><img src="/assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
           <p>Auto-tracked mileage and receipts, turned into IRS-compliant vehicle use records. Built for US businesses for audit-ready reporting.</p>
@@ -97,11 +107,17 @@
         <div class="footer-col">
           <h4>Product</h4>
           <a href="/us-en/features.html">Features</a>
-          <a href="/us-en/calculator.html">Calculator</a>
           <a href="/us-en/pricing.html">Pricing</a>
           <a href="/us-en/for-business.html">For business</a>
           <a href="/us-en/accountants.html">For accountants</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/us-en/calculator.html">Calculator</a>
+          <a href="/us-en/mileage-rates.html">Mileage rates</a>
+          <a href="/us-en/mileage-log-template.html">Mileage log template</a>
           <a href="/us-en/guides/">Guides</a>
+          <a href="/us-en/resources.html">All resources</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -135,7 +151,7 @@
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-links a').forEach(function (a) {
+      document.querySelectorAll('.nav-links > a, .nav-links .nav-dd__t').forEach(function (a) {
         if (a.getAttribute('href') === file) a.classList.add('active');
       });
     })();

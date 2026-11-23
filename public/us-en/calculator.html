@@ -36,7 +36,17 @@
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="features.html">Features</a>
-        <a href="tools.html">Free tools</a>
+        <div class="nav-dd">
+          <a class="nav-dd__t" href="resources.html" aria-haspopup="true">Resources<span class="nav-dd__car" aria-hidden="true"></span></a>
+          <div class="nav-dd__menu"><div class="nav-dd__panel">
+            <a href="calculator.html">Mileage calculator</a>
+            <a href="mileage-rates.html">2026 IRS mileage rates</a>
+            <a href="mileage-log-template.html">Mileage log template</a>
+            <a href="guides/">Guides</a>
+            <hr />
+            <a href="resources.html">All resources</a>
+          </div></div>
+        </div>
         <a href="pricing.html">Pricing</a>
         <a href="for-business.html">For business</a>
         <a href="accountants.html">For accountants</a>
@@ -49,23 +59,18 @@
   </header>
 
   <main>
-    <section class="section--ink" style="padding-block:clamp(40px,5vw,72px);">
+    <section class="section--ink tool-hero" style="padding-block:clamp(40px,5vw,72px);">
       <div class="wrap">
-        <div class="section-head left" style="margin-bottom:0;">
-          <p class="eyebrow">Calculator</p>
-          <h1 class="display h-xl" style="color:var(--on-ink);">Mileage deduction calculator (US)</h1>
+        <div class="section-head left" style="margin-bottom:36px;">
+          <p class="eyebrow">Calculator · United States</p>
+          <h1 class="display h-xl" style="color:var(--on-ink);">Mileage savings calculator</h1>
           <p class="lede" style="color:var(--on-ink-dim);">See roughly what your business driving could save you in 2026. Takes about 20 seconds.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--tight">
-      <div class="wrap">
         <div class="ec" id="efCalc" data-country="US">
           <div class="ec__in">
           <div class="ec-field">
             <label>How do you want to enter your driving?</label>
-            <div class="ec-seg" role="group" aria-label="Entry method">
+            <div class="seg" role="group" aria-label="Entry method">
               <button type="button" data-mode="week" aria-pressed="true">Estimate from my week</button>
               <button type="button" data-mode="year" aria-pressed="false">I know my yearly total</button>
             </div>
@@ -109,6 +114,7 @@
               <div><span id="oLab2"></span><b id="oDed"></b></div>
             </div>
             <p class="ec-warn" id="warn" hidden></p>
+            <p class="ec-follow no-print">A log is what backs this number up. <a href="https://web.expenseflow.app/" data-platform-cta data-cta="calc-result">ExpenseFlow records it for you&nbsp;→</a></p>
             <div class="ec-actions">
               <button type="button" class="tulip-btn tulip-btn--outline" id="btnPrint" data-cta="calc-print">Print or save</button>
               <button type="button" class="tulip-btn tulip-btn--outline" id="btnCopy" data-cta="calc-copy">Copy link</button>
@@ -119,16 +125,17 @@
       </div>
     </section>
 
-    <section class="section section--tight no-print">
+
+    <section class="section section--tight ec-gap no-print">
       <div class="wrap">
         <div class="rt-next">
-          <p><b>An estimate needs records behind it.</b> The IRS expects a trip-by-trip log. Start with our <a href="mileage-log-template.html">free mileage log template</a>, or let ExpenseFlow record trips for you.</p>
+          <p><b>Keep records behind your number.</b> The IRS requires adequate records to support a deduction, and a trip log is the usual way. Good records protect your claim. Start with our <a href="mileage-log-template.html">mileage log template</a>, or let ExpenseFlow record trips for you.</p>
           <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/" data-platform-cta data-cta="calc-next">Try ExpenseFlow</a>
         </div>
       </div>
     </section>
 
-    <section class="section section--tight no-print">
+    <section class="section section--tight ec-gap2 no-print">
       <div class="wrap">
         <div class="section-head left"><h2 class="display h-lg">How this is worked out</h2></div>
         <ul class="ec-list">
@@ -141,13 +148,13 @@
           <li>Commuting between home and a regular workplace is generally not deductible.</li>
           <li>This is for self-employed people and business owners. W-2 employees generally cannot deduct unreimbursed mileage.</li>
           <li>The standard rate is one method. Actual expenses (gas, insurance, repairs, depreciation) can be higher for some vehicles. Ask your accountant.</li>
-          <li>The IRS expects a record of each trip: date, miles, destination and business purpose.</li>
+          <li>The IRS requires adequate records to support a deduction. A trip log with date, miles, destination and purpose is the usual way.</li>
         </ul>
       </div>
     </section>
 
-    <section class="section no-print">
-      <div class="wrap wrap--narrow">
+    <section class="section section--tight no-print">
+      <div class="wrap">
         <div class="section-head left"><h2 class="display h-lg">Common questions</h2></div>
         <div class="faq">
           <details><summary>What tax rate should I pick?<span class="material-symbols-outlined">add</span></summary><p>Use the rate on your next dollar of income: your federal bracket plus state tax. Self-employed people also pay about 14% in self-employment tax, so many land between 30% and 40%.</p></details>
@@ -161,7 +168,7 @@
     <section class="section section--tight">
       <div class="wrap">
         <div class="section-head left">
-          <h2 class="display h-lg">More free tools</h2>
+          <h2 class="display h-lg">Also useful</h2>
         </div>
         <div class="feature-grid">
           <div class="feat-card">
@@ -172,7 +179,7 @@
           <div class="feat-card">
             <span class="ico"><span class="material-symbols-outlined">table_chart</span></span>
             <h3><a href="mileage-log-template.html" style="color:inherit;text-decoration:none;">Free mileage log template</a></h3>
-            <p>Excel, Google Sheets or printable, with the fields the IRS expects.</p>
+            <p>Excel, Google Sheets or printable, with the fields the IRS looks for.</p>
           </div>
         </div>
       </div>
@@ -181,7 +188,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid--5">
         <div class="footer-brand">
           <a class="brand" href="index.html"><img src="../assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
           <p>Auto-tracked mileage and receipts, turned into IRS-compliant vehicle use records. Built for US businesses for audit-ready reporting.</p>
@@ -189,13 +196,17 @@
         <div class="footer-col">
           <h4>Product</h4>
           <a href="features.html">Features</a>
-          <a href="calculator.html">Calculator</a>
-          <a href="mileage-rates.html">Mileage rates</a>
-          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="pricing.html">Pricing</a>
           <a href="for-business.html">For business</a>
           <a href="accountants.html">For accountants</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="calculator.html">Calculator</a>
+          <a href="mileage-rates.html">Mileage rates</a>
+          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="guides/">Guides</a>
+          <a href="resources.html">All resources</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -230,8 +241,8 @@
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-links a').forEach(function (a) {
-        if (a.getAttribute('href') === file || (a.getAttribute('href') === 'tools.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
+      document.querySelectorAll('.nav-links > a, .nav-links .nav-dd__t').forEach(function (a) {
+        if (a.getAttribute('href') === file || (a.getAttribute('href') === 'resources.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
       });
     })();
   </script>

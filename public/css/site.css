@@ -175,6 +175,23 @@ body { overflow-x: hidden; }
   content: ""; position: absolute; left: 0; right: 0; bottom: -24px;
   height: 2px; background: var(--gold);
 }
+
+/* Resources dropdown (desktop). On mobile the nav is a scroll row, so it stays a plain link. */
+.nav-dd { position: relative; display: flex; align-items: center; }
+.nav-dd__car {
+  display: inline-block; margin-left: 7px; width: 5px; height: 5px;
+  border: solid currentColor; border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg) translateY(-2px);
+}
+.nav-dd__menu { display: none; position: absolute; top: 100%; left: -14px; padding-top: 22px; z-index: 60; }
+.nav-dd:hover .nav-dd__menu, .nav-dd:focus-within .nav-dd__menu { display: block; }
+.nav-dd__panel {
+  background: var(--ink-2, #26241f); border: 1px solid var(--ink-line, #3a372f);
+  border-radius: 12px; padding: 8px; min-width: 240px; box-shadow: 0 12px 32px rgba(0,0,0,.35);
+}
+.nav-dd__panel a { display: block; padding: 10px 12px; border-radius: 8px; white-space: nowrap; }
+.nav-dd__panel a:hover { background: rgba(255,255,255,.06); }
+.nav-dd__panel hr { border: 0; border-top: 1px solid var(--ink-line, #3a372f); margin: 6px 4px; }
 .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 12px; }
 .nav-cta .ghost-link { color: var(--on-ink-dim); text-decoration: none; font-size: 15px; font-weight: 500; }
 .nav-cta .ghost-link:hover { color: var(--on-ink); }
@@ -219,6 +236,7 @@ body { overflow-x: hidden; }
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a { flex: 0 0 auto; padding: 6px 0; }
   .nav-links a.active::after { bottom: 0; }
+  .nav-dd__menu, .nav-dd__car { display: none !important; }
 }
 @media (max-width: 560px) {
   .nav-cta .ghost-link { display: none; }
@@ -259,6 +277,7 @@ body { overflow-x: hidden; }
 }
 .footer-bottom a { color: var(--on-ink-dim); text-decoration: none; }
 .footer-bottom a:hover { color: var(--on-ink); }
+@media (min-width: 761px) { .footer-grid--5 { grid-template-columns: 1.6fr repeat(4, 1fr); } }
 @media (max-width: 760px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-brand { grid-column: 1 / -1; }
@@ -360,6 +379,7 @@ body { overflow-x: hidden; }
    ===================================================================== */
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .feat-card {
+  position: relative;
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-surface);
@@ -368,6 +388,10 @@ body { overflow-x: hidden; }
   transition: box-shadow var(--t-fast), transform var(--t-fast);
 }
 .feat-card:hover { box-shadow: var(--shadow-card-hover); }
+/* Cards whose title is a link: the whole card is clickable. */
+.feat-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.feat-card h3 a:focus-visible { outline: none; }
+.feat-card h3 a:focus-visible::after { outline: 2px solid var(--gold); outline-offset: 2px; }
 .feat-card .ico {
   width: 46px; height: 46px; border-radius: var(--radius-control);
   display: inline-flex; align-items: center; justify-content: center;

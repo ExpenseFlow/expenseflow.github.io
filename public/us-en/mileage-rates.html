@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
   <link rel="stylesheet" href="../css/tools.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which IRS mileage rate do I use in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Use 72.5 cents per mile for business driving from January 1 to June 30, 2026, and 76 cents per mile from July 1 to December 31, 2026. The rate depends on the date of each trip."}}, {"@type": "Question", "name": "Can I deduct my commute?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no. Driving between your home and a regular workplace is commuting. Trips from your workplace or home office to clients, job sites or other business stops can qualify. Ask your tax professional about your situation."}}, {"@type": "Question", "name": "Can employees deduct mileage?", "acceptedAnswer": {"@type": "Answer", "text": "Under current federal rules, W-2 employees generally cannot deduct unreimbursed mileage. Self-employed people (Schedule C) can use the standard mileage rate. Employers can reimburse at or below the IRS rate under an accountable plan."}}, {"@type": "Question", "name": "Do I need a mileage log?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The IRS requires adequate records, such as the date, distance, destination and business purpose of each trip, kept at or near the time of the trip. A year-end estimate is not enough."}}, {"@type": "Question", "name": "Standard mileage or actual expenses?", "acceptedAnswer": {"@type": "Answer", "text": "The standard rate is simpler: miles × rate. Actual expenses (fuel, insurance, repairs, depreciation) times your business-use percentage can be higher for expensive or low-mileage vehicles. Rules limit switching methods, so check before your first year of use."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which IRS mileage rate do I use in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Use 72.5 cents per mile for business driving from January 1 to June 30, 2026, and 76 cents per mile from July 1 to December 31, 2026. The rate depends on the date of each trip."}}, {"@type": "Question", "name": "Can I deduct my commute?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no. Driving between your home and a regular workplace is commuting. Trips from your workplace or home office to clients, job sites or other business stops can qualify. Ask your tax professional about your situation."}}, {"@type": "Question", "name": "Can employees deduct mileage?", "acceptedAnswer": {"@type": "Answer", "text": "Under current federal rules, W-2 employees generally cannot deduct unreimbursed mileage. Self-employed people (Schedule C) can use the standard mileage rate. Employers can reimburse at or below the IRS rate under an accountable plan."}}, {"@type": "Question", "name": "Do I need a mileage log?", "acceptedAnswer": {"@type": "Answer", "text": "The IRS requires adequate records to support the deduction, such as the date, distance, destination and business purpose of each trip. A log kept at or near the time of each trip is the strongest evidence, and a rough year-end estimate is risky."}}, {"@type": "Question", "name": "Standard mileage or actual expenses?", "acceptedAnswer": {"@type": "Answer", "text": "The standard rate is simpler: miles × rate. Actual expenses (fuel, insurance, repairs, depreciation) times your business-use percentage can be higher for expensive or low-mileage vehicles. Rules limit switching methods, so check before your first year of use."}}]}</script>
 </head>
 <body>
   <!-- ===================== NAV ===================== -->
@@ -33,7 +33,17 @@
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="features.html">Features</a>
-        <a href="tools.html">Free tools</a>
+        <div class="nav-dd">
+          <a class="nav-dd__t" href="resources.html" aria-haspopup="true">Resources<span class="nav-dd__car" aria-hidden="true"></span></a>
+          <div class="nav-dd__menu"><div class="nav-dd__panel">
+            <a href="calculator.html">Mileage calculator</a>
+            <a href="mileage-rates.html">2026 IRS mileage rates</a>
+            <a href="mileage-log-template.html">Mileage log template</a>
+            <a href="guides/">Guides</a>
+            <hr />
+            <a href="resources.html">All resources</a>
+          </div></div>
+        </div>
         <a href="pricing.html">Pricing</a>
         <a href="for-business.html">For business</a>
         <a href="accountants.html">For accountants</a>
@@ -46,7 +56,7 @@
   </header>
 
   <main>
-    <section class="section--ink rt-hero">
+    <section class="section--ink rt-hero tool-hero">
       <div class="wrap">
         <div class="section-head left" style="margin-bottom:0;">
           <p class="eyebrow">IRS mileage rates</p>
@@ -111,14 +121,14 @@
     <section class="section section--tight">
       <div class="wrap">
         <div class="rt-next">
-          <p><b>Got the rate? You still need the log.</b> The IRS expects a record of each trip: date, miles, destination and business purpose. ExpenseFlow records them for you in the background.</p>
+          <p><b>Got the rate? Keep a log too.</b> The IRS requires adequate records to support a deduction. A trip log with date, miles, destination and purpose is the usual way. ExpenseFlow records them for you in the background.</p>
           <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/" data-platform-cta data-cta="rates-next">Track it automatically</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap wrap--narrow">
+    <section class="section section--tight">
+      <div class="wrap">
         <div class="section-head left">
           <h2 class="display h-lg">Common questions</h2>
         </div>
@@ -126,7 +136,7 @@
           <details><summary>Which IRS mileage rate do I use in 2026?<span class="material-symbols-outlined">add</span></summary><p>Use 72.5 cents per mile for business driving from January 1 to June 30, 2026, and 76 cents per mile from July 1 to December 31, 2026. The rate depends on the date of each trip.</p></details>
           <details><summary>Can I deduct my commute?<span class="material-symbols-outlined">add</span></summary><p>Generally no. Driving between your home and a regular workplace is commuting. Trips from your workplace or home office to clients, job sites or other business stops can qualify. Ask your tax professional about your situation.</p></details>
           <details><summary>Can employees deduct mileage?<span class="material-symbols-outlined">add</span></summary><p>Under current federal rules, W-2 employees generally cannot deduct unreimbursed mileage. Self-employed people (Schedule C) can use the standard mileage rate. Employers can reimburse at or below the IRS rate under an accountable plan.</p></details>
-          <details><summary>Do I need a mileage log?<span class="material-symbols-outlined">add</span></summary><p>Yes. The IRS requires adequate records, such as the date, distance, destination and business purpose of each trip, kept at or near the time of the trip. A year-end estimate is not enough.</p></details>
+          <details><summary>Do I need a mileage log?<span class="material-symbols-outlined">add</span></summary><p>The IRS requires adequate records to support the deduction, such as the date, distance, destination and business purpose of each trip. A log kept at or near the time of each trip is the strongest evidence, and a rough year-end estimate is risky.</p></details>
           <details><summary>Standard mileage or actual expenses?<span class="material-symbols-outlined">add</span></summary><p>The standard rate is simpler: miles × rate. Actual expenses (fuel, insurance, repairs, depreciation) times your business-use percentage can be higher for expensive or low-mileage vehicles. Rules limit switching methods, so check before your first year of use.</p></details>
         </div>
       </div>
@@ -134,7 +144,7 @@
     <section class="section section--tight">
       <div class="wrap">
         <div class="section-head left">
-          <h2 class="display h-lg">More free tools</h2>
+          <h2 class="display h-lg">Also useful</h2>
         </div>
         <div class="feature-grid">
           <div class="feat-card">
@@ -145,7 +155,7 @@
           <div class="feat-card">
             <span class="ico"><span class="material-symbols-outlined">table_chart</span></span>
             <h3><a href="mileage-log-template.html" style="color:inherit;text-decoration:none;">Free mileage log template</a></h3>
-            <p>Excel, Google Sheets or printable, with the fields the IRS expects.</p>
+            <p>Excel, Google Sheets or printable, with the fields the IRS looks for.</p>
           </div>
         </div>
       </div>
@@ -154,7 +164,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid--5">
         <div class="footer-brand">
           <a class="brand" href="index.html"><img src="../assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
           <p>Auto-tracked mileage and receipts, turned into IRS-compliant vehicle use records. Built for US businesses for audit-ready reporting.</p>
@@ -162,13 +172,17 @@
         <div class="footer-col">
           <h4>Product</h4>
           <a href="features.html">Features</a>
-          <a href="calculator.html">Calculator</a>
-          <a href="mileage-rates.html">Mileage rates</a>
-          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="pricing.html">Pricing</a>
           <a href="for-business.html">For business</a>
           <a href="accountants.html">For accountants</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="calculator.html">Calculator</a>
+          <a href="mileage-rates.html">Mileage rates</a>
+          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="guides/">Guides</a>
+          <a href="resources.html">All resources</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -203,8 +217,8 @@
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-links a').forEach(function (a) {
-        if (a.getAttribute('href') === file || (a.getAttribute('href') === 'tools.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
+      document.querySelectorAll('.nav-links > a, .nav-links .nav-dd__t').forEach(function (a) {
+        if (a.getAttribute('href') === file || (a.getAttribute('href') === 'resources.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
       });
     })();
     (function () {

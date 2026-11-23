@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="../css/colors_and_type.css" />
   <link rel="stylesheet" href="../css/site.css" />
   <link rel="stylesheet" href="../css/tools.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the CRA require in a logbook?", "acceptedAnswer": {"@type": "Answer", "text": "For each business trip: the date, destination, purpose and kilometres driven, plus the total kilometres driven in the year. A full 12-month logbook can set your business-use percentage for later years."}}, {"@type": "Question", "name": "Can I use this in Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Open Google Sheets, choose File, then Import, then Upload, and select the downloaded file. Formulas work the same way."}}, {"@type": "Question", "name": "Which rates does it use?", "acceptedAnswer": {"@type": "Answer", "text": "The 2026 CRA per-km allowance rates: 73 cents for the first 5,000 km and 67 cents after. Both are editable on the Summary tab. Self-employed people normally claim actual vehicle expenses times business-use percentage."}}, {"@type": "Question", "name": "Is this tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a record-keeping tool. Confirm what you can deduct with your accountant."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What should a CRA logbook include?", "acceptedAnswer": {"@type": "Answer", "text": "CRA guidance suggests a log of each business trip with the date, destination, purpose and kilometres driven, plus the total kilometres driven in the year. A full 12-month logbook can set your business-use percentage for later years under the simplified method. Ask your accountant what applies to you."}}, {"@type": "Question", "name": "Can I use this in Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Open Google Sheets, choose File, then Import, then Upload, and select the downloaded file. Formulas work the same way."}}, {"@type": "Question", "name": "Which rates does it use?", "acceptedAnswer": {"@type": "Answer", "text": "The 2026 CRA per-km allowance rates: 73 cents for the first 5,000 km and 67 cents after. Both are editable on the Summary tab. Self-employed people normally claim actual vehicle expenses times business-use percentage."}}, {"@type": "Question", "name": "Is this tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a record-keeping tool. Confirm what you can deduct with your accountant."}}]}</script>
 </head>
 <body class="lg-page">
   <header class="site-nav">
@@ -32,7 +32,17 @@
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="features.html">Features</a>
-        <a href="tools.html">Free tools</a>
+        <div class="nav-dd">
+          <a class="nav-dd__t" href="resources.html" aria-haspopup="true">Resources<span class="nav-dd__car" aria-hidden="true"></span></a>
+          <div class="nav-dd__menu"><div class="nav-dd__panel">
+            <a href="calculator.html">Mileage calculator</a>
+            <a href="mileage-rates.html">2026 CRA per-km rates</a>
+            <a href="mileage-log-template.html">Mileage logbook template</a>
+            <a href="guides/">Guides</a>
+            <hr />
+            <a href="resources.html">All resources</a>
+          </div></div>
+        </div>
         <a href="pricing.html">Pricing</a>
         <a href="for-business.html">For business</a>
         <a href="accountants.html">For accountants</a>
@@ -45,12 +55,12 @@
   </header>
 
   <main>
-    <section class="section--ink lg-hero">
+    <section class="section--ink lg-hero tool-hero">
       <div class="wrap">
         <div class="section-head left" style="margin-bottom:0;">
           <p class="eyebrow">Free template</p>
           <h1 class="display h-xl" style="color:var(--on-ink);">Free CRA mileage logbook template</h1>
-          <p class="lede" style="color:var(--on-ink-dim);">A simple spreadsheet with the fields the CRA expects, automatic totals and the 2026 per-km rates built in.</p>
+          <p class="lede" style="color:var(--on-ink-dim);">A simple spreadsheet with the fields the CRA looks for, automatic totals and the 2026 per-km rates built in.</p>
         </div>
         <div class="lg-actions">
           <a class="tulip-btn tulip-btn--gold btn-lg" href="../assets/downloads/expenseflow-mileage-log-ca.xlsx" download data-cta="log-download">Download for Excel / Google Sheets</a>
@@ -64,7 +74,7 @@
     <section class="section section--tight">
       <div class="wrap">
         <div class="section-head left">
-          <h2 class="display h-lg">What the CRA expects in a logbook</h2>
+          <h2 class="display h-lg">What a CRA logbook should include</h2>
         </div>
         <div class="lg-fields">
           <div><b>Date</b><span>When each business trip happened.</span></div>
@@ -87,32 +97,36 @@
           <li>Business distance by month, and an estimate of the hours you spend logging by hand.</li>
           <li>Prints cleanly on one page width. Space for 300 trips.</li>
         </ul>
-        <h2 class="display h-lg" style="margin-top:40px;">Where a spreadsheet struggles</h2>
-        <ul class="lg-cmp">
-          <li><b>Remembering.</b> Every trip is typed by hand, and most people fall behind after a few weeks.</li>
-          <li><b>Proof.</b> Cells can be edited later, so a spreadsheet does not show when a trip was recorded.</li>
-          <li><b>Receipts and odometer photos</b> live somewhere else.</li>
-        </ul>
-        <p class="lg-cmp" style="margin-top:12px;">If that sounds like you, ExpenseFlow records trips and receipts automatically in the background. If the sheet works for you, keep using it.</p>
+        <h2 class="display h-lg" style="margin-top:40px;">Spreadsheet or app?</h2>
+        <table class="rt-table cmp-table">
+          <thead><tr><th></th><th>This spreadsheet</th><th>ExpenseFlow</th></tr></thead>
+          <tbody>
+            <tr><td>Entering trips</td><td>You type each one</td><td>Recorded automatically</td></tr>
+            <tr><td>Proof of when it was logged</td><td>Cells can be edited later</td><td>Time-stamped when recorded</td></tr>
+            <tr><td>Receipts</td><td>Kept somewhere else</td><td>Captured in the same place</td></tr>
+            <tr><td>Account needed</td><td>No</td><td>Yes, free to start</td></tr>
+          </tbody>
+        </table>
+        <p class="rt-note">If the sheet works for you, keep using it. If you keep falling behind on entries, <a href="https://web.expenseflow.app/" data-platform-cta data-cta="log-compare">try ExpenseFlow</a>.</p>
       </div>
     </section>
 
     <section class="section section--tight">
       <div class="wrap">
         <div class="lg-next">
-          <p><b>Tired of typing trips?</b> ExpenseFlow logs them for you, with the fields the CRA expects.</p>
+          <p><b>Tired of typing trips?</b> ExpenseFlow logs them for you, with the fields the CRA looks for.</p>
           <a class="tulip-btn tulip-btn--gold" href="https://web.expenseflow.app/" data-platform-cta data-cta="log-next">Try it free</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap wrap--narrow">
+    <section class="section section--tight">
+      <div class="wrap">
         <div class="section-head left">
           <h2 class="display h-lg">Common questions</h2>
         </div>
         <div class="faq">
-          <details><summary>What does the CRA require in a logbook?<span class="material-symbols-outlined">add</span></summary><p>For each business trip: the date, destination, purpose and kilometres driven, plus the total kilometres driven in the year. A full 12-month logbook can set your business-use percentage for later years.</p></details>
+          <details><summary>What should a CRA logbook include?<span class="material-symbols-outlined">add</span></summary><p>CRA guidance suggests a log of each business trip with the date, destination, purpose and kilometres driven, plus the total kilometres driven in the year. A full 12-month logbook can set your business-use percentage for later years under the simplified method. Ask your accountant what applies to you.</p></details>
           <details><summary>Can I use this in Google Sheets?<span class="material-symbols-outlined">add</span></summary><p>Yes. Open Google Sheets, choose File, then Import, then Upload, and select the downloaded file. Formulas work the same way.</p></details>
           <details><summary>Which rates does it use?<span class="material-symbols-outlined">add</span></summary><p>The 2026 CRA per-km allowance rates: 73 cents for the first 5,000 km and 67 cents after. Both are editable on the Summary tab. Self-employed people normally claim actual vehicle expenses times business-use percentage.</p></details>
           <details><summary>Is this tax advice?<span class="material-symbols-outlined">add</span></summary><p>No. It is a record-keeping tool. Confirm what you can deduct with your accountant.</p></details>
@@ -122,7 +136,7 @@
     <section class="section section--tight">
       <div class="wrap">
         <div class="section-head left">
-          <h2 class="display h-lg">More free tools</h2>
+          <h2 class="display h-lg">Also useful</h2>
         </div>
         <div class="feature-grid">
           <div class="feat-card">
@@ -172,7 +186,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid--5">
         <div class="footer-brand">
           <a class="brand" href="index.html"><img src="../assets/app-icon-512.png" alt="" /><b>ExpenseFlow</b></a>
           <p>Auto-tracked mileage and receipts, turned into CRA-compliant vehicle use records. Built in Canada for audit-ready reporting.</p>
@@ -180,13 +194,17 @@
         <div class="footer-col">
           <h4>Product</h4>
           <a href="features.html">Features</a>
-          <a href="calculator.html">Calculator</a>
-          <a href="mileage-rates.html">Mileage rates</a>
-          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="pricing.html">Pricing</a>
           <a href="for-business.html">For business</a>
           <a href="accountants.html">For accountants</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="calculator.html">Calculator</a>
+          <a href="mileage-rates.html">Mileage rates</a>
+          <a href="mileage-log-template.html">Mileage log template</a>
           <a href="guides/">Guides</a>
+          <a href="resources.html">All resources</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -220,8 +238,8 @@
   <script>
     (function () {
       var file = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-links a').forEach(function (a) {
-        if (a.getAttribute('href') === file || (a.getAttribute('href') === 'tools.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
+      document.querySelectorAll('.nav-links > a, .nav-links .nav-dd__t').forEach(function (a) {
+        if (a.getAttribute('href') === file || (a.getAttribute('href') === 'resources.html' && /^(calculator|mileage-rates|mileage-log-template)\.html$/.test(file))) a.classList.add('active');
       });
     })();
     (function () {
